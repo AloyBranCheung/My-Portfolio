@@ -21,11 +21,6 @@ export default function NavbarMenu({ menuState, onMenuClick }: Props) {
           </Link>
         </li>
         <li className={styles.bounceEffect2}>
-          <Link href="/knick-knacks">
-            <a onClick={onMenuClick}>KnickKnacks</a>
-          </Link>
-        </li>
-        <li className={styles.bounceEffect3}>
           <Link href="/blog">
             <a onClick={onMenuClick}>Blog</a>
           </Link>

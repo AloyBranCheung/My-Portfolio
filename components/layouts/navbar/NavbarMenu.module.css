@@ -108,8 +108,3 @@
   animation: var(--animation-bounce) 1s ease-out 0.5s forwards,
     var(--animation-reveal) 1s ease-out 0.5s forwards;
 }
-.bounceEffect3 {
-  opacity: 0;
-  animation: var(--animation-bounce) 1s ease-out 0.75s forwards,
-    var(--animation-reveal) 1s ease-out 0.75s forwards;
-}
