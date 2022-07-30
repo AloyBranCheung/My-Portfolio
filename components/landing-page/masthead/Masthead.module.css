@@ -1,17 +1,12 @@
 .mastContainer {
   height: 100vh;
-  background-color: var(--main-bg);
-  /* background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 1)
-  ); */
-  /* url("https://m.media-amazon.com/images/M/MV5BZmZhNWMyODgtMzA0OC00NWFhLTllODQtYmJkZjYxYWU4MGU1XkEyXkFqcGdeQWFybm8@._V1_.jpg"); */
-  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 0 20rem;
+  background-image: url("../../../public/assets/hrvoje_photography-4TVbbaNAw9Q-unsplash.jpg");
+  background-size: cover;
+  overflow: hidden;
 }
 
 .buttonContainer {

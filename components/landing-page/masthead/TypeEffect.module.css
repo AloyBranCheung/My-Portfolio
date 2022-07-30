@@ -5,6 +5,7 @@
   color: var(--main-headline);
   font-size: 6rem;
   padding-left: 3rem;
+  font-family: "ComicCat";
 }
 
 @media screen and (max-width: 769px) {

@@ -4,12 +4,13 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgba(35, 41, 70, 0.9);
-  padding: 2.5rem 22rem;
+  padding: 1% 12%;
   position: fixed;
   width: 100%;
   top: 0;
   transition: all 0.1s ease-out;
   z-index: 100;
+  font-family: "ComicCat";
 }
 
 .navbarScrolling {
@@ -24,6 +25,17 @@
   opacity: 0;
   animation: var(--animation-bounce) 1s ease-out forwards,
     var(--animation-reveal) 1s ease-out forwards;
+}
+
+.brandTitle:active {
+  font-size: 2.9rem;
+}
+
+@media (hover: hover) {
+  .brandTitle:hover {
+    color: var(--main-button-bg);
+    transition: color 0.3s ease-out;
+  }
 }
 
 .navIcon {

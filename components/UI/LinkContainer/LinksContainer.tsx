@@ -21,7 +21,7 @@ export default function LinksContainer(props: Props) {
           <LinkedInIcon className={styles.icon} sx={{ fontSize: 30 }} />
         </a>
       </Link>
-      <Link href="">
+      <Link href="https://1drv.ms/b/s!Al5ugnacF4jkqMoAeZrLmoJZ1rT1lQ">
         <a target="_blank">
           <ArticleIcon className={styles.icon} sx={{ fontSize: 30 }} />
         </a>

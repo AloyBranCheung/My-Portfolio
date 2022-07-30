@@ -9,3 +9,9 @@
 .icon:active {
   padding: 10%;
 }
+
+@media (hover: hover) {
+  .icon:hover {
+    color: var(--main-paragraph);
+  }
+}

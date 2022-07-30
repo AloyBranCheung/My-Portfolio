@@ -12,8 +12,6 @@ export default function useScrollToggle() {
     useCallback(() => {
       // current scroll pos
       const currentScrollPos = window.pageYOffset;
-      console.log(currentScrollPos);
-      console.log(prevScrollPos);
 
       // Boolean reveal navbar on scroll-up (true) or false
       setIsVisible(

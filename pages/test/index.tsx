@@ -15,38 +15,7 @@ export default function Test() {
 
   return (
     <div className={styles.test}>
-      {!state.succeeded && (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Your Email Address</label>
-          <input id="email" name="email" type="email" />
-          <ValidationError
-            prefix="Your email"
-            field="email"
-            errors={state.errors}
-          />
-          <label htmlFor="name">Your name</label>
-          <input ref={nameRef} id="name" name="name" type="text" />
-          <ValidationError
-            prefix="Your name"
-            field="name"
-            errors={state.errors}
-          />
-
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-
-          <button type="submit" disabled={state.submitting}>
-            Submit
-          </button>
-        </form>
-      )}
-
-      {state.succeeded && <p>Thank you for your submission.</p>}
+      <h1>Hello World</h1>
     </div>
   );
 }

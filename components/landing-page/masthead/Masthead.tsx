@@ -4,7 +4,6 @@ import MainButton from "../../UI/MainButton";
 import { Parallax } from "react-scroll-parallax";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import blueBlob from "../../../public/assets/blue-blob.png";
 
 export default function Masthead() {
   const router = useRouter();
