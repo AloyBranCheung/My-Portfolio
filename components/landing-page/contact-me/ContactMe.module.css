@@ -63,7 +63,6 @@
   display: grid;
   grid-template-columns: 1fr;
   overflow: hidden;
-  background-image: url("../../../public/assets/humphrey-muleba-cPeCmVChZu0-unsplash.jpg");
   animation: revealContainer 0.5s ease-out forwards;
   transform-origin: center;
 }
