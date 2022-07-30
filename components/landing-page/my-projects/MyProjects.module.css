@@ -1,7 +1,6 @@
 .projectsSection {
   background-color: var(--second-bg-color);
   position: relative;
-  z-index: 1;
   padding: 5rem;
 }
 

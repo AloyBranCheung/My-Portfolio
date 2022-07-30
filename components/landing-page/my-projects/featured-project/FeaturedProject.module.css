@@ -21,7 +21,7 @@
 @media (hover: hover) {
   .imageWrapper:hover {
     opacity: 0.8;
-    transition: all 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
   }
 }
 
@@ -122,7 +122,7 @@
 
   .links {
     padding: 0 10%;
-    margin: 6% 0 6% 0;
+    margin: 6% 0;
     display: flex;
     justify-content: space-around;
   }

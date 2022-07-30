@@ -1,13 +1,11 @@
 .footerSection {
   display: flex;
-  position: relative;
+  flex-direction: column;
   height: 15vh;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 .header {
-  align-self: center;
-  justify-self: center;
   color: var(--main-headline);
 }
 
@@ -15,8 +13,19 @@
   padding: 5%;
 }
 
+.links {
+  margin-top: 1%;
+  padding: 0 20%;
+}
+
 @media (hover: hover) {
   .header:hover {
     color: var(--main-paragraph);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.5rem;
   }
 }

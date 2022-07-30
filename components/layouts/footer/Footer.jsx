@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 import Link from "next/link";
+import LinksContainer from "../../UI/LinkContainer/LinksContainer";
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
           <h3>Made with love by Brandon Cheung 🐢</h3>
         </a>
       </Link>
+      <LinksContainer className={styles.links} />
     </footer>
   );
 }

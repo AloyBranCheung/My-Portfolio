@@ -7,7 +7,7 @@
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.1s ease-out;
-  z-index: 200;
+  z-index: 100;
 }
 
 .none {

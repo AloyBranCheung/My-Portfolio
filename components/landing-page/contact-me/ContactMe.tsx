@@ -1,4 +1,3 @@
-import { Parallax } from "react-scroll-parallax";
 import styles from "./ContactMe.module.css";
 import ContactForm from "./ContactForm";
 import AboutMe from "./AboutMe";
