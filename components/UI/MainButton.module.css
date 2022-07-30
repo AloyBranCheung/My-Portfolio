@@ -1,0 +1,14 @@
+.mainButton {
+  background-color: var(--main-button-bg);
+  border-radius: 5px;
+  border: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (hover: hover) {
+  .mainButton {
+    cursor: pointer;
+  }
+}

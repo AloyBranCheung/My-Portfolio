@@ -1,0 +1,56 @@
+.navbar {
+  color: var(--main-headline);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(35, 41, 70, 0.9);
+  padding: 2.5rem 22rem 2.5rem 22rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all 0.1s ease-out;
+  z-index: 100;
+}
+
+.navbarScrolling {
+  top: -10rem;
+  transition: all 0.1s ease-in;
+}
+
+.brandTitle {
+  justify-self: center;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0;
+  animation: var(--animation-bounce) 1s ease-out forwards,
+    var(--animation-reveal) 1s ease-out forwards;
+}
+
+.navIcon {
+  transform: scale(3);
+  display: none;
+  right: 4rem;
+  top: 3.75rem;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 2.5rem 17rem;
+  }
+
+  .navIcon {
+    display: flex;
+    transform: scale(2);
+    top: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2.5rem 4rem;
+  }
+
+  .brandTitle {
+    font-size: 2rem;
+  }
+}

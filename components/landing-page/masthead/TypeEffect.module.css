@@ -1,0 +1,14 @@
+.textWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--main-headline);
+  font-size: 6rem;
+  padding-left: 3rem;
+}
+
+@media screen and (max-width: 769px) {
+  .textWrapper {
+    font-size: xx-large;
+  }
+}

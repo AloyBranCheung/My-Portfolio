@@ -1,0 +1,16 @@
+.navIcon {
+  position: fixed;
+  bottom: 5rem;
+  right: 4rem;
+  transform: rotate(180deg) scale(2.5);
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.1s ease-out;
+  z-index: 200;
+}
+
+.none {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}

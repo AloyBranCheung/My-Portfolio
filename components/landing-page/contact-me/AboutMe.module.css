@@ -1,0 +1,10 @@
+.linksContainer {
+  margin-top: 12%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.resume {
+  align-self: center;
+}

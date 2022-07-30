@@ -1,0 +1,81 @@
+.mastContainer {
+  height: 100vh;
+  background-color: var(--main-bg);
+  /* background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 1)
+  ); */
+  /* url("https://m.media-amazon.com/images/M/MV5BZmZhNWMyODgtMzA0OC00NWFhLTllODQtYmJkZjYxYWU4MGU1XkEyXkFqcGdeQWFybm8@._V1_.jpg"); */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20rem;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.textEffect {
+  animation: var(--animation-reveal) 0.5s ease-out;
+}
+
+.mainButton {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  transform: scale(0.9);
+  font-family: "ComicCat";
+  transition: all 0.03s ease-in;
+  animation: var(--animation-reveal) 0.5s ease-out;
+}
+
+.mainButton:active {
+  transform: scale(0.8);
+  transition: all 0.01s ease-in;
+}
+
+@media (hover: hover) {
+  .mainButton:hover {
+    background-color: var(--main-card-bg);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-out;
+  }
+  .mainButton:active {
+    transform: scale(0.8);
+    transition: all 0.01s ease-in;
+  }
+}
+
+@media (max-width: 769px) {
+  .mainButton {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 769px) {
+  .mastContainer {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .buttonContainer {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+  }
+}

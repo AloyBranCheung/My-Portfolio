@@ -1,0 +1,12 @@
+.footerSection {
+  display: flex;
+  position: relative;
+  height: 15vh;
+  align-content: center;
+  justify-content: center;
+}
+.header {
+  align-self: center;
+  justify-self: center;
+  color: var(--main-headline);
+}

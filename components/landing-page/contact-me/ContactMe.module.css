@@ -1,0 +1,35 @@
+.contactSection {
+  display: flex;
+  height: 100vh;
+  background-color: var(--pre-footer-bg);
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  color: var(--main-headline);
+}
+
+.aboutMe {
+  padding: 5%;
+}
+
+.contactSection h1 {
+  margin-bottom: 3rem;
+}
+
+.contactForm {
+  padding: 5%;
+}
+
+.contactFormContainer {
+  background-color: var(--main-bg-color);
+  padding: 10% 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1000px) {
+  .contactFormContainer {
+    grid-template-columns: 1fr;
+    padding: 2.5% 5%;
+  }
+}

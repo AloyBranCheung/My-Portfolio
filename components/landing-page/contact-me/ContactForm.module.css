@@ -1,0 +1,87 @@
+.formContainer {
+  display: grid;
+  column-gap: 5%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  row-gap: 2rem;
+}
+
+.nameContainer input {
+  font-family: ComicCat;
+}
+
+.emailContainer input {
+  font-family: ComicCat;
+}
+
+.subjectContainer {
+  grid-area: 2/1/3/3;
+}
+
+.subjectContainer input {
+  width: 100%;
+  font-family: ComicCat;
+}
+
+.messageContainer {
+  grid-area: 3/1/4/3;
+  display: grid;
+}
+
+.messageContainer label {
+  margin-bottom: 1rem;
+}
+
+.messageContainer textarea {
+  width: 100%;
+  min-height: 100px;
+  font-family: ComicCat;
+}
+
+.submitButton {
+  background-color: var(--pre-footer-card-bg);
+  border-radius: 5px;
+  border: 0;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+
+@media (hover: hover) {
+  .submitButton {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .nameContainer {
+    grid-area: 1/1/2/3;
+    display: flex;
+  }
+
+  .nameContainer input {
+    margin-left: 1rem;
+    width: 100%;
+  }
+
+  .emailContainer {
+    grid-area: 2/1/3/3;
+    display: flex;
+  }
+
+  .emailContainer input {
+    margin-left: 1rem;
+    width: 100%;
+  }
+
+  .subjectContainer {
+    grid-row: 3/4;
+  }
+
+  .messageContainer {
+    grid-row: 4/5;
+  }
+
+  .submitButton {
+    grid-row: 5/6;
+  }
+}

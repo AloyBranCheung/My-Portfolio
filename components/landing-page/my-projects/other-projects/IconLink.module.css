@@ -1,0 +1,9 @@
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.icon:active {
+  padding: 25%;
+}

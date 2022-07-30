@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "ComicCat";
+  src: url("../public/fonts/Comic_CAT.otf") format("opentype");
+}
+
+/* *********************************** global variables *********************************** */
+:root {
+  --main-bg-color: #232946;
+  --main-headline: #fffffe;
+  --main-paragraph: #b8c1ec;
+  --main-button-bg: #eebbc3;
+  --main-button-text: #232946;
+
+  --main-card-bg: #fffffe;
+  --main-card-headline: #232946;
+  --main-card-paragraph: #232946;
+  --main-card-tag-bg: #232946;
+  --main-card-tag-text: #b8c1ec;
+  --main-card-highlight: #d4939d;
+
+  --second-bg-color: #d4d8f0;
+  --second-bg-headline: #232946;
+  --second-sub-headline: #232946;
+  --second-card-bg: #fffffe;
+  --second-card-heading: #232946;
+  --second-card-paragraph: #232946;
+
+  --pre-footer-bg: #eebbc3;
+  --pre-footer-headline: #232946;
+  --pre-footer-paragraph: #232946;
+  --pre-footer-link: #232946;
+  --pre-footer-card-bg: #fffffe;
+  --pre-footer-card-headline: #232946;
+  --pre-footer-card-paragraph: #232946;
+
+  --animation-reveal: reveal;
+  --animation-bounce: bounce;
+  --animation-bounceWoops: bounceWoops;
+}
+
+/* @media (max-width: 769px) { */
+
+/* *********************************** animations ****************************** */
+/* fade-in animation */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* bounce effect animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(35px);
+  }
+  40% {
+    transform: translateY(-35px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  80% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* *********************************** boilerplate *********************************** */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "ComicCat";
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  background-color: var(--main-bg-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

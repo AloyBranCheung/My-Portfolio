@@ -1,0 +1,8 @@
+.test {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: salmon;
+  align-items: center;
+  justify-content: center;
+}
