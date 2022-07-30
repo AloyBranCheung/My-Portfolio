@@ -1,0 +1,11 @@
+.linkContainer {
+  display: flex;
+  color: var(--main-headline);
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon:active {
+  padding: 10%;
+}

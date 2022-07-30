@@ -4,14 +4,18 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
   row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .nameContainer input {
   font-family: ComicCat;
+  width: 100%;
 }
 
 .emailContainer input {
   font-family: ComicCat;
+  width: 100%;
 }
 
 .subjectContainer {
