@@ -4,7 +4,7 @@
   background-color: var(--pre-footer-bg);
   align-items: center;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 5% 10%;
   color: var(--main-headline);
 }
 
@@ -14,22 +14,146 @@
 
 .aboutMe {
   padding: 5%;
+  animation: translateDown 0.5s ease-out forwards 0.8s;
+  transform-origin: top center;
+  opacity: 0;
+}
+
+@keyframes translateDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .contactForm {
   padding: 5%;
+  opacity: 0;
+  animation: translateUp 0.5s ease-out forwards 0.8s;
+  transform-origin: top center;
+}
+
+@keyframes translateUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .contactFormContainer {
   background-color: var(--main-bg-color);
   padding: 10% 20%;
   display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  background-image: url("../../../public/assets/humphrey-muleba-cPeCmVChZu0-unsplash.jpg");
+  animation: revealContainer 0.5s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes revealContainer {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  80% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.parallaxContainer {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.contactButton {
+  background-color: var(--pre-footer-card-bg);
+  color: var(--pre-footer-card-paragraph);
+  border-radius: 5px;
+  border: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  height: 25vh;
+  width: 50vw;
+  overflow: hidden;
+}
+
+@media (hover: hover) {
+  .contactButton {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1000px) {
   .contactFormContainer {
+    padding: 25% 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallaxContainer {
     grid-template-columns: 1fr;
-    padding: 2.5% 5%;
+  }
+
+  @keyframes translateUp {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes translateDown {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    80% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

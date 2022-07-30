@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./AboutMe.module.css";
 import LinksContainer from "../../UI/LinkContainer/LinksContainer";
 

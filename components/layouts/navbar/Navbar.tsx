@@ -11,15 +11,17 @@ export default function Navbar() {
   // Responsive drop-down menu for mobile
   const [menuToggle, setMenuToggle] = useState(false);
 
-  const menuClickHandler = () => {
-    setMenuToggle((prevState) => !prevState);
-  };
-
   // True/false scroll toggle custom hook
   const { isVisible: navIsVisible } = useScrollToggle();
 
+  const menuClickHandler = () => {
+    console.log("clicked");
+    setMenuToggle((prevState) => !prevState);
+  };
+
   // Brand Title navigate home
   const brandTitleClick = () => {
+    menuClickHandler();
     router.push("/");
   };
 

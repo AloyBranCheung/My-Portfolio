@@ -9,12 +9,10 @@
 }
 
 .nameContainer input {
-  font-family: ComicCat;
   width: 100%;
 }
 
 .emailContainer input {
-  font-family: ComicCat;
   width: 100%;
 }
 
@@ -24,7 +22,6 @@
 
 .subjectContainer input {
   width: 100%;
-  font-family: ComicCat;
 }
 
 .messageContainer {
@@ -39,7 +36,6 @@
 .messageContainer textarea {
   width: 100%;
   min-height: 100px;
-  font-family: ComicCat;
 }
 
 .submitButton {

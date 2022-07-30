@@ -27,7 +27,7 @@ export default function ContactForm(props: Props) {
         <div className={props.className}>
           <form onSubmit={handleSubmit} className={styles.formContainer}>
             <div className={styles.nameContainer}>
-              <label htmlFor="name">Name </label>
+              <label htmlFor="name">Name</label>
               <input id="name" type="text" name="name" />
               <ValidationError
                 prefix="Your name"
@@ -37,7 +37,7 @@ export default function ContactForm(props: Props) {
             </div>
 
             <div className={styles.emailContainer}>
-              <label htmlFor="email">Email </label>
+              <label htmlFor="email">Email</label>
               <input id="email" name="email" type="email" />
               <ValidationError
                 prefix="Your email"

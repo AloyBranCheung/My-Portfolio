@@ -37,6 +37,7 @@
   --animation-reveal: reveal;
   --animation-bounce: bounce;
   --animation-bounceWoops: bounceWoops;
+  --animation-growDown: grownDown;
 }
 
 /* @media (max-width: 769px) { */
@@ -82,13 +83,26 @@
   }
 }
 
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
 /* *********************************** boilerplate *********************************** */
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "ComicCat";
+  font-family: "Raleway";
 }
 
 html {
