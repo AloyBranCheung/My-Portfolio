@@ -1,5 +1,5 @@
 .cardContainer {
-  border-radius: 10px;
+  border-radius: 25px 10px;
   background-color: var(--second-card-bg);
   color: var(--second-card-paragraph);
   padding: 2rem;

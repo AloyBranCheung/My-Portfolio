@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(35, 41, 70, 0.9);
+  background-color: rgba(35, 41, 70, 0.5);
   padding: 1% 12%;
   position: fixed;
   width: 100%;
@@ -47,7 +47,7 @@
 
 @media (max-width: 1200px) {
   .navbar {
-    padding: 2.5rem 17rem;
+    padding: 2% 12%;
   }
 
   .navIcon {
