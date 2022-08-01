@@ -43,10 +43,6 @@
   text-align: right;
 }
 
-.title {
-  padding-right: 4%;
-}
-
 .techStack {
   list-style: none;
   display: flex;
@@ -91,15 +87,19 @@
 
   .image {
     object-fit: cover;
+    filter: blur(5px) brightness(90%);
   }
 
   .projectContent {
     grid-column: 1/-1;
     padding: 10%;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .title {
     margin-bottom: 10%;
+    padding-left: 5%;
   }
 
   .projectDescription {
@@ -108,5 +108,12 @@
 
   .techStack {
     margin-bottom: 10%;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .links {
+    justify-content: flex-start;
+    padding-left: 4%;
   }
 }

@@ -26,10 +26,6 @@
     var(--animation-reveal) 1s ease-out forwards;
 }
 
-.brandTitle:active {
-  font-size: 2.9rem;
-}
-
 .navIcon {
   right: 4rem;
   top: 3.75rem;
