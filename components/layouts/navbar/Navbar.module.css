@@ -30,12 +30,6 @@
   font-size: 2.9rem;
 }
 
-@media (hover: hover) {
-  .brandTitle:hover {
-    transition: all 0.3s ease-out;
-  }
-}
-
 .navIcon {
   right: 4rem;
   top: 3.75rem;
