@@ -6,5 +6,9 @@ type Props = {
 };
 
 export default function OtherProjectDescription(props: Props) {
-  return <p className={props.className}>{props.text}</p>;
+  return (
+    <>
+      <p className={props.className}>{props.text}</p>
+    </>
+  );
 }

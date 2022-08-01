@@ -1,7 +1,0 @@
-.test {
-  display: flex;
-  height: 110vh;
-  align-items: center;
-  justify-content: center;
-  color: var(--main-headline);
-}

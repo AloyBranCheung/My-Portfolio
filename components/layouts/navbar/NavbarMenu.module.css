@@ -23,15 +23,8 @@
 
 @media (hover: hover) {
   .menuList li:hover {
-    background-color: var(--main-card-highlight);
-    transform: scale(1.1);
-    margin: 0 1rem;
+    font-size: 2.5rem;
     transition: all 0.3s ease-out;
-  }
-
-  .menuList li:active {
-    transform: scale(0.9);
-    transition: transform 0.01s ease-out;
   }
 }
 
@@ -39,10 +32,9 @@
   .menuList {
     display: none;
     width: 100%;
-    background-color: var(--main-card-bg);
-    color: var(--main-card-paragraph);
+    background-color: var(--main-color);
     border-radius: 10px;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     text-align: center;
     padding: 1rem;
     animation: growDown 300ms ease-in-out forwards;
@@ -68,14 +60,6 @@
     height: 110vh;
     z-index: 100;
     right: 0rem;
-  }
-
-  .menuList li:active {
-    background-color: var(--card-highlight);
-    margin: 0 1rem;
-    border-radius: 10px;
-    transform: scale(0.9);
-    transition: all 0.01s ease-out;
   }
 
   @keyframes growDown {

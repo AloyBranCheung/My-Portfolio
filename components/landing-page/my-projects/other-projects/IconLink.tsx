@@ -13,12 +13,12 @@ export default function IconLink(props: Props) {
   return (
     <div className={styles.linkContainer}>
       <Link href={props.githubUrl}>
-        <a>
+        <a target="_blank">
           <FolderCopyIcon className={styles.icon} sx={{ fontSize: 25 }} />
         </a>
       </Link>
       <Link href={props.deployUrl}>
-        <a >
+        <a target="_blank">
           <LaunchIcon className={styles.icon} sx={{ fontSize: 25 }} />
         </a>
       </Link>

@@ -5,36 +5,40 @@ export default function OtherProjects() {
   return (
     <li className={styles.otherProjectsContainer}>
       <OtherProjectCard
-        title="Project Title"
+        title="GOAT Quotes"
         cardStyle={`${styles.card1}`}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        description="A full-stack website that displays quotes generated from APIs like Kanye REST."
         descriptionStyle={styles.description}
-        githubUrl=""
-        deployUrl=""
+        githubUrl="https://github.com/AloyBranCheung/QuotesWebsite"
+        deployUrl="https://gentle-brushlands-11763.herokuapp.com/"
+        techStack="Techs: HTML/CSS/JS, jQuery, Bootstrap5, Node/Express.js"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="Project Title"
-        cardStyle={`${styles.card2}`}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title="Typescript To-do List"
+        cardStyle={`${styles.card1}`}
+        description="A to-do list made with typescript react."
         descriptionStyle={styles.description}
-        githubUrl=""
-        deployUrl=""
+        githubUrl="https://github.com/AloyBranCheung/TypescriptTodoList"
+        deployUrl="https://merry-torte-9f438a.netlify.app/"
+        techStack="Techs: React.js, Typescript"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="Project Title"
-        cardStyle={`${styles.card3}`}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title="ReactMeals"
+        cardStyle={`${styles.card1}`}
+        description="ReactMeals is a food ordering web app"
         descriptionStyle={styles.description}
-        githubUrl=""
-        deployUrl=""
+        githubUrl="https://github.com/AloyBranCheung/ReactMeals"
+        deployUrl="https://aquamarine-capybara-5f358f.netlify.app/"
+        techStack="Techs: React.js, Styled-components, Firebase"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="Project Title"
-        cardStyle={`${styles.card4}`}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        title="Redux Cart"
+        cardStyle={`${styles.card1}`}
+        description="Add/remove items to a cart, connected to firebase for cart persistence"
         descriptionStyle={styles.description}
-        githubUrl=""
-        deployUrl=""
+        githubUrl="https://github.com/AloyBranCheung/ReduxCart"
+        deployUrl="https://incredible-torrone-9191df.netlify.app/"
+        techStack="Techs: React/Next.js, React Redux, Firebase"
       ></OtherProjectCard>
     </li>
   );

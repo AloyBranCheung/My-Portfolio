@@ -1,6 +1,6 @@
 .footerSection {
   display: flex;
-  height: 50vh;
+  height: 30vh;
   justify-content: center;
   align-items: center;
 }
@@ -11,10 +11,6 @@
 }
 .header {
   color: var(--main-headline);
-}
-
-.links {
-  margin-top: 1%;
 }
 
 @media (hover: hover) {

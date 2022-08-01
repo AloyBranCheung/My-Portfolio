@@ -10,6 +10,7 @@ type Props = {
   descriptionStyle: string;
   githubUrl: string;
   deployUrl: string;
+  techStack: string;
 };
 export default function OtherProjectCard(props: Props) {
   return (
@@ -20,6 +21,8 @@ export default function OtherProjectCard(props: Props) {
         text={props.description}
         className={`${props.descriptionStyle} ${styles.description}`}
       />
+      <br></br>
+      <p>{props.techStack}</p>
     </SecondaryCard>
   );
 }
