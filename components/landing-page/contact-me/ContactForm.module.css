@@ -48,6 +48,20 @@
   font-size: 1.5rem;
 }
 
+.inputArea {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  resize: none;
+}
+
+.inputArea:focus {
+  outline: none;
+}
+
 @media (hover: hover) {
   .submitButton {
     cursor: pointer;

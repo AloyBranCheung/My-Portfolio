@@ -47,13 +47,13 @@ export default function FeaturedProject(props: Props) {
 
         <div className={styles.links}>
           <Link href={props.githubUrl}>
-            <a>
-              <GitHubIcon className={styles.linkItems} />
+            <a target="_blank" className={styles.githubIcon}>
+              <GitHubIcon sx={{ fontSize: "3rem" }} />
             </a>
           </Link>
           <Link href={props.deployUrl}>
-            <a>
-              <LaunchIcon className={styles.linkItems} />
+            <a target="_blank" className={styles.launchIcon}>
+              <LaunchIcon sx={{ fontSize: "3rem" }} />
             </a>
           </Link>
         </div>

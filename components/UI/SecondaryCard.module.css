@@ -1,5 +1,5 @@
 .cardContainer {
-  border-radius: 25px 10px;
+  border-radius: 15px;
   background-color: var(--secondary-color);
   color: var(--text);
   font-weight: bold;

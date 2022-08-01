@@ -20,27 +20,7 @@ export default function MyProjects(props: Props) {
           imgSrc={projectDummy}
           heading="Featured Project"
           titleProject="Project 1"
-          description="Video chat app made with Twilio API, call, join a meeting and socialize."
-          techStack={test}
-          githubUrl=""
-          deployUrl=""
-        />
-        <FeaturedProject
-          className={styles.project}
-          imgSrc={projectDummy}
-          heading="Featured Project"
-          titleProject="Project 1"
-          description="Video chat app made with Twilio API, call, join a meeting and socialize."
-          techStack={test}
-          githubUrl=""
-          deployUrl=""
-        />
-        <FeaturedProject
-          className={styles.project}
-          imgSrc={projectDummy}
-          heading="Featured Project"
-          titleProject="Project 1"
-          description="Video chat app made with Twilio API, call, join a meeting and socialize."
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           techStack={test}
           githubUrl=""
           deployUrl=""
