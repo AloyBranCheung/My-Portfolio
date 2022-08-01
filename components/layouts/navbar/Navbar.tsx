@@ -15,7 +15,6 @@ export default function Navbar() {
   const { isVisible: navIsVisible } = useScrollToggle();
 
   const menuClickHandler = () => {
-    console.log("clicked");
     setMenuToggle((prevState) => !prevState);
   };
 
@@ -34,7 +33,9 @@ export default function Navbar() {
         Brandon Cheung
       </div>
       <NavbarMenu menuState={menuToggle} onMenuClick={menuClickHandler} />
-      <MenuIcon onClick={menuClickHandler} className={styles.navIcon} />
+      <div className={styles.navIcon}>
+        <MenuIcon sx={{ fontSize: "2rem" }} onClick={menuClickHandler} />
+      </div>
     </nav>
   );
 }

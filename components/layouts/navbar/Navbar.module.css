@@ -39,10 +39,9 @@
 }
 
 .navIcon {
-  transform: scale(3);
-  display: none;
   right: 4rem;
   top: 3.75rem;
+  display: none;
 }
 
 @media (max-width: 1200px) {
