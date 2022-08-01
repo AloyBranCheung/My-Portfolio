@@ -22,7 +22,7 @@ export default function OtherProjectCard(props: Props) {
         className={`${props.descriptionStyle} ${styles.description}`}
       />
       <br></br>
-      <p>{props.techStack}</p>
+      <p className={styles.techStack}>{props.techStack}</p>
     </SecondaryCard>
   );
 }
