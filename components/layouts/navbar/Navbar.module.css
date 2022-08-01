@@ -1,9 +1,8 @@
 .navbar {
-  color: var(--main-headline);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(35, 41, 70, 0.5);
+  background-color: var(--main-color);
   padding: 1% 12%;
   position: fixed;
   width: 100%;
@@ -33,8 +32,7 @@
 
 @media (hover: hover) {
   .brandTitle:hover {
-    color: var(--main-button-bg);
-    transition: color 0.3s ease-out;
+    transition: all 0.3s ease-out;
   }
 }
 

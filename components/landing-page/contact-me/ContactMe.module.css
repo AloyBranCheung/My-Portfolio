@@ -1,11 +1,12 @@
 .contactSection {
   display: flex;
   position: relative;
-  background-color: var(--pre-footer-bg);
+  background-color: var(--secondary-color);
   align-items: center;
   justify-content: center;
   padding: 5% 10%;
-  color: var(--main-headline);
+  font-weight: bold;
+  border-radius: 10px 15px;
 }
 
 .contactSection h1 {
@@ -58,7 +59,8 @@
 }
 
 .contactFormContainer {
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
+  border-radius: 15px 20px;
   padding: 10% 20%;
   display: grid;
   grid-template-columns: 1fr;

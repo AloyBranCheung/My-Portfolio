@@ -35,15 +35,17 @@
 
 .messageContainer textarea {
   width: 100%;
-  min-height: 100px;
+  min-height: 10rem;
 }
 
 .submitButton {
-  background-color: var(--pre-footer-card-bg);
+  background-color: var(--secondary-color);
+  color: var(--text);
+  font-weight: bold;
   border-radius: 5px;
   border: 0;
-  padding: 1rem 2rem;
-  font-size: 2rem;
+  padding: 1rem 0;
+  font-size: 1.5rem;
 }
 
 @media (hover: hover) {
