@@ -88,32 +88,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.contactButton {
-  background-color: var(--pre-footer-card-bg);
-  color: var(--pre-footer-card-paragraph);
-  border-radius: 5px;
-  border: 0;
-  padding: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.buttonContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--main-bg-color);
-  height: 50vh;
-  width: 50vw;
-  overflow: hidden;
-}
-
-@media (hover: hover) {
-  .contactButton {
-    cursor: pointer;
-  }
-}
-
 @media (max-width: 1000px) {
   .contactFormContainer {
     padding: 25% 5%;
