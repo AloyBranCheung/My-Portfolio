@@ -1,7 +1,7 @@
 .cardContainer {
-  border-radius: 15px;
+  border-radius: 25px 15px;
   background-color: var(--secondary-color);
   color: var(--text);
   font-weight: bold;
-  padding: 2rem;
+  padding: 5% 6%;
 }
