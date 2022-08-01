@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap");
 @font-face {
   font-family: "ComicCat";
-  src: url("../public/fonts/Comic_CAT.otf") format("opentype");
+  src: url("/public/assets/fonts/Comic_CAT.otf") format("opentype");
 }
 
 /* *********************************** global variables *********************************** */

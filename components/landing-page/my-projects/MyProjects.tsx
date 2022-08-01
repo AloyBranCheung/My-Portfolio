@@ -1,7 +1,7 @@
 import styles from "./MyProjects.module.css";
 import FeaturedProject from "./featured-project/FeaturedProject";
 import OtherProjects from "./other-projects/OtherProjects";
-import projectDummy from "../../../public/assets/test2.jpg";
+import projectDummy from "../../../public/assets/images/test2.jpg";
 
 type Props = {
   id: string;
