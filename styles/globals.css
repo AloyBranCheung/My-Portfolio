@@ -6,33 +6,9 @@
 
 /* *********************************** global variables *********************************** */
 :root {
-  --main-bg-color: #232946;
-  --main-headline: #fffffe;
-  --main-paragraph: #b8c1ec;
-  --main-button-bg: #eebbc3;
-  --main-button-text: #232946;
-
-  --main-card-bg: #fffffe;
-  --main-card-headline: #232946;
-  --main-card-paragraph: #232946;
-  --main-card-tag-bg: #232946;
-  --main-card-tag-text: #b8c1ec;
-  --main-card-highlight: #d4939d;
-
-  --second-bg-color: #d4d8f0;
-  --second-bg-headline: #232946;
-  --second-sub-headline: #232946;
-  --second-card-bg: #fffffe;
-  --second-card-heading: #232946;
-  --second-card-paragraph: #232946;
-
-  --pre-footer-bg: #eebbc3;
-  --pre-footer-headline: #232946;
-  --pre-footer-paragraph: #232946;
-  --pre-footer-link: #232946;
-  --pre-footer-card-bg: #fffffe;
-  --pre-footer-card-headline: #232946;
-  --pre-footer-card-paragraph: #232946;
+  --main-color: #5cdb95;
+  --secondary-color: #edf5e1; /*card background too */
+  --text: #05386b;
 
   --animation-reveal: reveal;
   --animation-bounce: bounce;
@@ -113,7 +89,8 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-color);
+  color: var(--text);
 }
 
 a {

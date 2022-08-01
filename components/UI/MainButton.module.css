@@ -1,5 +1,6 @@
 .mainButton {
-  background-color: var(--main-button-bg);
+  background-color: var(--main-color);
+  color: var(--text);
   border-radius: 5px;
   border: 0;
   padding: 1rem;

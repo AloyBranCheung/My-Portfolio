@@ -4,8 +4,11 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 20rem;
-  background-image: url("../../../public/assets/images/hrvoje_photography-4TVbbaNAw9Q-unsplash.jpg");
-  background-size: cover;
+  background-color: var(--secondary-color);
+  margin: 6% 5%;
+  border-radius: 10px 15px;
+  /* background-image: url("../../../public/assets/images/hrvoje_photography-4TVbbaNAw9Q-unsplash.jpg");
+  background-size: cover; */
   overflow: hidden;
 }
 
@@ -40,7 +43,7 @@
 
 @media (hover: hover) {
   .mainButton:hover {
-    background-color: var(--main-card-bg);
+    background-color: var(--main-color);
     cursor: pointer;
     transform: scale(1.05);
     transition: all 0.3s ease-out;

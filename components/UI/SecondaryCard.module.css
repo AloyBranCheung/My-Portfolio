@@ -1,6 +1,7 @@
 .cardContainer {
   border-radius: 25px 10px;
-  background-color: var(--second-card-bg);
-  color: var(--second-card-paragraph);
+  background-color: var(--secondary-color);
+  color: var(--text);
+  font-weight: bold;
   padding: 2rem;
 }
