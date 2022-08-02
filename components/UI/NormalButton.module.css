@@ -1,0 +1,21 @@
+.normalButton {
+  background-color: var(--main-color);
+  color: var(--text);
+  border-radius: 5px;
+  border: 0;
+  padding: 10% 20%;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.normalButton:active {
+  padding: 4% 9%;
+}
+
+@media (hover: hover) {
+  .normalButton:hover {
+    background-color: var(--main-color);
+    transition: all 0.2s ease-out;
+  }
+}
