@@ -21,11 +21,17 @@
 
 .loginButton {
   margin-top: 10%;
-  padding: 2.5% 5%;
 }
 
 @media (max-width: 1200px) {
   .blogMasthead {
-    background-image: url("../../../public/assets/images/blogMastHead.jpg");
+    background-image: linear-gradient(
+        to bottom,
+        rgba(92, 219, 149, 0.5),
+        rgba(237, 245, 225, 0.8)
+      ),
+      url("../../../public/assets/images/blogMastHead.jpg");
+
+    transition: all 0.3s ease-out;
   }
 }

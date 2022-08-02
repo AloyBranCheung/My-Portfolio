@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 
 type Props = {
   className?: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 };
 
 export default function Card({ className, children }: Props) {
