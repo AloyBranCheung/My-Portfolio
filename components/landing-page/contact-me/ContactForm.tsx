@@ -19,9 +19,9 @@ export default function ContactForm(props: Props) {
   return (
     <>
       {state.succeeded && (
-        <>
+        <div className={styles.thanks}>
           <h1>Thank you for your submission :D.</h1>
-        </>
+        </div>
       )}
       {!state.succeeded && (
         <div className={props.className}>
@@ -33,6 +33,7 @@ export default function ContactForm(props: Props) {
                 id="name"
                 type="text"
                 name="name"
+                required
               />
               <ValidationError
                 prefix="Your name"
@@ -48,6 +49,7 @@ export default function ContactForm(props: Props) {
                 id="email"
                 name="email"
                 type="email"
+                required
               />
               <ValidationError
                 prefix="Your email"
@@ -72,6 +74,7 @@ export default function ContactForm(props: Props) {
                 className={styles.inputArea}
                 id="message"
                 name="message"
+                required
               />
               <ValidationError
                 prefix="Your message"

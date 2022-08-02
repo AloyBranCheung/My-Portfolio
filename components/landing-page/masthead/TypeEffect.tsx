@@ -20,6 +20,7 @@ export default function TypeEffect(props: Props) {
       ],
       typeSpeed: 70,
       backSpeed: 40,
+      showCursor: false,
     };
 
     const typed = new Typed(el.current!, options);

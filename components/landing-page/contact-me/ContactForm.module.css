@@ -56,10 +56,18 @@
   font-family: "Raleway";
   font-size: 1.5rem;
   resize: none;
+  padding: 3% 4%;
 }
 
 .inputArea:focus {
   outline: none;
+}
+
+.thanks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 @media (hover: hover) {
