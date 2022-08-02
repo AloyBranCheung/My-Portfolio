@@ -1,0 +1,31 @@
+.blogMasthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../../public/assets/images/blogMastHead.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.blogMasthead p {
+  margin-top: 4%;
+  font-size: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButton {
+  margin-top: 10%;
+  padding: 2.5% 5%;
+}
+
+@media (max-width: 1200px) {
+  .blogMasthead {
+    background-image: url("../../../public/assets/images/blogMastHead.jpg");
+  }
+}

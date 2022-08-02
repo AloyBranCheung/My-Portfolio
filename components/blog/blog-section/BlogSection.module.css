@@ -1,0 +1,13 @@
+.blogSection {
+  margin-top: -5%;
+  padding: 0 5%;
+}
+
+.blogsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+}

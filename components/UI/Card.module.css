@@ -1,0 +1,5 @@
+.cardContainer {
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  color: var(--text);
+}
