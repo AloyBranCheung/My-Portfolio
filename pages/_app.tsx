@@ -4,6 +4,7 @@ import Layout from "../components/layouts/Layout";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
+import AuthContextProvider from "../context/AuthContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,11 +12,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence initial={false}>
-        <ParallaxProvider>
-          <Component {...pageProps} />
-        </ParallaxProvider>
-      </AnimatePresence>
+      <AuthContextProvider>
+        <AnimatePresence initial={false}>
+          <ParallaxProvider>
+            <Component {...pageProps} />
+          </ParallaxProvider>
+        </AnimatePresence>
+      </AuthContextProvider>
     </Layout>
   );
 }

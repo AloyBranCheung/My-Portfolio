@@ -4,12 +4,22 @@ import styles from "./NormalButton.module.css";
 type Props = {
   text: string;
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset" | undefined;
 };
 
-export default function NormalButton({ text, className, onClick }: Props) {
+export default function NormalButton({
+  text,
+  className,
+  onClick,
+  type,
+}: Props) {
   return (
-    <button onClick={onClick} className={`${styles.normalButton} ${className}`}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${styles.normalButton} ${className}`}
+    >
       {text}
     </button>
   );

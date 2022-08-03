@@ -11,7 +11,7 @@ export default function Blog() {
       exit={{ opacity: 0 }}
     >
       <Head>
-        <title>Brandon's Blog</title>
+        <title>Brandon&apos;s Blog</title>
       </Head>
       <BlogMasthead />
       <BlogSection />

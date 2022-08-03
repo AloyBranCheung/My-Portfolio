@@ -3,6 +3,7 @@ import Card from "../../UI/Card";
 import styles from "./BlogSection.module.css";
 import { v4 as uuidv4 } from "uuid";
 import Paginate from "../paginate/Paginate";
+import useFirebaseAuth from "../../../hooks/useFirebaseAuth";
 
 const DUMMY_DATA: {
   title: string;
@@ -68,6 +69,9 @@ const DUMMY_DATA: {
 ];
 
 export default function BlogSection() {
+  const { readBlogData } = useFirebaseAuth();
+  console.log(readBlogData()); // console.log shows undefined
+
   return (
     <section className={styles.blogSection}>
       <Card className={styles.blogsContainer}>

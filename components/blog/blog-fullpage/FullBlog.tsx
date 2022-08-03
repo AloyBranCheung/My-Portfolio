@@ -9,8 +9,8 @@ export default function FullBlog() {
   const backClickHandler = () => {
     router.back();
   };
-
   console.log(router.query);
+
   return (
     <div className={styles.blogContainer}>
       <NormalButton
