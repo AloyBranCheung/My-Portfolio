@@ -30,7 +30,7 @@ export default function BlogMasthead() {
       <div>
         <Parallax speed={-10}>
           <h1>My Personal Blog</h1>
-          <p>A little something for me to rant</p>
+          <p>a little something for me to share whatever I want</p>
           <div className={styles.buttonContainer}>
             <NormalButton
               className={styles.loginButton}

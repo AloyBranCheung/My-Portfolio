@@ -22,7 +22,6 @@ export default function BlogPreviewCard({
 }: Props) {
   const router = useRouter();
   const imageClickHandler = () => {
-    console.log("clicked");
     router.push(`/blog/${id}`);
   };
 
