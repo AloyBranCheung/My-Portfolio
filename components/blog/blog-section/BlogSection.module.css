@@ -5,17 +5,12 @@
 
 .blogsContainer {
   padding: 5% 20%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .blogsContainer h5 {
   border-bottom: 2px solid;
-}
-
-.gridCard {
-  margin-top: 5%;
 }
 
 @media (max-width: 1200px) {

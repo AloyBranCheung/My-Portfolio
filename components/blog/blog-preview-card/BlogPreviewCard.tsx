@@ -1,23 +1,53 @@
 import React from "react";
 import Image from "next/image";
-import testImage from "../../../public/assets/images/blogMastHead.jpg";
 import styles from "./BlogPreviewCard.module.css";
+import { useRouter } from "next/router";
 
 type Props = {
   className?: string;
+  title: string;
+  description: string;
+  timeStamp: string;
+  imgSrc: string;
+  id: string;
 };
 
-export default function BlogPreviewCard({ className }: Props) {
+export default function BlogPreviewCard({
+  className,
+  title,
+  description,
+  timeStamp,
+  imgSrc,
+  id,
+}: Props) {
+  const router = useRouter();
+  const imageClickHandler = () => {
+    console.log("clicked");
+    router.push(`/blog/${id}`);
+  };
+
   return (
-    <article className={`${styles.gridContainer} ${className}`}>
-      <h1 className={styles.title}>Title of Blog</h1>
-      <p className={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt
+    <article
+      onClick={imageClickHandler}
+      className={`${styles.gridContainer} ${className}`}
+    >
+      <h1 onClick={imageClickHandler} className={styles.title}>
+        {title}
+      </h1>
+      <p onClick={imageClickHandler} className={styles.description}>
+        {description}
       </p>
-      <time className={styles.timeStamp}>Time Published 0000-00-00</time>
-      <div className={styles.imageContainer}>
-        <Image className={styles.image} src={testImage} alt="test-img" />
+      <time onClick={imageClickHandler} className={styles.timeStamp}>
+        {timeStamp}
+      </time>
+      <div onClick={imageClickHandler} className={styles.imageContainer}>
+        <Image
+          className={styles.image}
+          height="1080px"
+          width="1920px"
+          src={imgSrc}
+          alt="blogPreview-img"
+        />
       </div>
     </article>
   );

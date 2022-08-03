@@ -1,0 +1,24 @@
+.gridCard {
+  margin: 5% 0;
+}
+.container {
+  margin: 2% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 2rem;
+  padding: 0 20%;
+}
+
+.next,
+.previous,
+.li {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
