@@ -101,5 +101,8 @@ export default function useFirebaseAuth() {
       });
   };
 
+  // READ Firebase DB
+  // useEffect(() => {}, [])
+
   return { login, logout, loginStatus, writeBlogData };
 }
