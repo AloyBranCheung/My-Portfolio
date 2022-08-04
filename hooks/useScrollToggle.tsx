@@ -7,43 +7,29 @@ export default function useScrollToggle() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
-  // wrap callback with debounce so doesn't trigger every scroll
-  const onScrollHandler = _.debounce(
+  const navVisible = _.debounce(
     useCallback(() => {
-      // current scroll pos
-      const currentScrollPos = window.pageYOffset;
+      const currentPos = window.pageYOffset;
 
-      // Boolean reveal navbar on scroll-up (true) or false
-      setIsVisible(
-        (prevScrollPos > currentScrollPos &&
-          // how many pixels needed to scroll up to trigger effect
-          prevScrollPos - currentScrollPos > 70) ||
-          // ensures that navbar always shows whenever we are at least 10px of top
-          // of page
-          currentScrollPos < 10
-      );
+      if (prevScrollPos > currentPos) {
+        setIsVisible(true);
+      } else if (prevScrollPos < currentPos) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
 
-      // set state to new scroll position
-      setPrevScrollPos(currentScrollPos);
+      setPrevScrollPos(currentPos);
     }, [prevScrollPos]),
     100
   );
 
   useEffect(() => {
-    // trigger onScrollHandler when scrolling
-    window.addEventListener("wheel", onScrollHandler);
+    window.addEventListener("scroll", navVisible);
+    return () => {
+      window.removeEventListener("scroll", navVisible);
+    };
+  });
 
-    // clean-up
-    return () => window.removeEventListener("wheel", onScrollHandler);
-  }, [prevScrollPos, isVisible, onScrollHandler]);
-
-  useEffect(() => {
-    // trigger onScrollHandler when scrolling
-    window.addEventListener("touchmove", onScrollHandler);
-
-    // clean-up
-    return () => window.removeEventListener("touchmove", onScrollHandler);
-  }, [prevScrollPos, isVisible, onScrollHandler]);
-
-  return { isVisible, setIsVisible };
+  return { isVisible };
 }

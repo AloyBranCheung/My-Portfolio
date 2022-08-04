@@ -4,10 +4,21 @@
 }
 
 .blogsContainer {
+  padding: 5% 20%;
   display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  padding: 15%;
+  flex-direction: column;
+}
+
+.blogsContainer h5 {
+  border-bottom: 2px solid;
+}
+
+@media (max-width: 1200px) {
+  .blogSection {
+    margin-top: -10%;
+  }
+
+  .blogsContainer {
+    padding: 5% 15%;
+  }
 }

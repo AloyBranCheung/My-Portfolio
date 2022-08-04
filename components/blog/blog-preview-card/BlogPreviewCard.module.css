@@ -1,0 +1,100 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 2.5% 5%;
+}
+
+.title {
+  grid-area: 1/1/2/6;
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+  margin-bottom: 2.5%;
+}
+
+.description {
+  grid-area: 2/1/3/6;
+  font-size: 1.5rem;
+  z-index: 1;
+  cursor: pointer;
+  margin-bottom: 2.5%;
+}
+
+.timeStamp {
+  grid-area: 3/1/4/6;
+  font-size: 1.25rem;
+  align-self: flex-end;
+  z-index: 1;
+  opacity: 0.7;
+  cursor: pointer;
+  margin-bottom: 2.5%;
+}
+
+.imageContainer {
+  grid-area: 1/7/4/-1;
+  position: relative;
+  display: flex;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imageContainer:active {
+  margin: 1%;
+}
+
+@media (hover: hover) {
+  .imageContainer:hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-out;
+  }
+}
+
+@media (max-width: 1200px) {
+  .imageContainer {
+    grid-column: 6/-1;
+  }
+
+  .title {
+    grid-column: 1/5;
+  }
+
+  .description {
+    grid-column: 1/5;
+  }
+
+  .timeStamp {
+    grid-column: 1/5;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    margin-top: 5%;
+  }
+  .imageContainer {
+    grid-column: 1/-1;
+    grid-row: 1/5;
+  }
+
+  .title {
+    margin-top: 5%;
+    padding: 2% 7%;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+
+  .description {
+    padding: 2% 7%;
+    grid-column: 1/-1;
+    grid-row: 6/7;
+  }
+
+  .timeStamp {
+    padding: 2% 7%;
+    grid-column: 1/-1;
+    margin-bottom: 5%;
+    grid-row: 7/8;
+  }
+}

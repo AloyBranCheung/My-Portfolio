@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent, useRef } from "react";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -11,14 +11,23 @@ import NormalButton from "../../UI/NormalButton";
 type Props = {
   isOpen: boolean;
   handleClose: () => void;
-  loginHandler: () => void;
+  submitHandler: (email: string, password: string) => void;
 };
 
 export default function LoginModal({
   isOpen,
   handleClose,
-  loginHandler,
+  submitHandler,
 }: Props) {
+  const emailRef = useRef<HTMLInputElement>();
+  const passwordRef = useRef<HTMLInputElement>();
+  const formSubmit = (event: SyntheticEvent) => {
+    event.preventDefault();
+    const email = emailRef.current!.value;
+    const password = passwordRef.current!.value;
+    submitHandler(email, password);
+  };
+
   return (
     <div>
       <Dialog
@@ -31,39 +40,43 @@ export default function LoginModal({
           <DialogContentText className={styles.subTitle}>
             My blog content management system.
           </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="email"
-            label="Email"
-            type="email"
-            fullWidth
-            variant="standard"
-            className={styles.email}
-          />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="password"
-            label="Password"
-            type="text"
-            fullWidth
-            variant="standard"
-            className={styles.password}
-          />
+          <form onSubmit={formSubmit}>
+            <TextField
+              inputRef={emailRef}
+              margin="dense"
+              id="email"
+              label="Email"
+              type="email"
+              fullWidth
+              variant="standard"
+              className={styles.email}
+              required={true}
+            />
+            <TextField
+              inputRef={passwordRef}
+              type="password"
+              margin="dense"
+              id="password"
+              label="Password"
+              fullWidth
+              variant="standard"
+              className={styles.password}
+              required={true}
+            />
+            <DialogActions>
+              <NormalButton
+                className={styles.modalButtons}
+                text="Cancel"
+                onClick={handleClose}
+              />
+              <NormalButton
+                className={styles.modalButtons}
+                text="Login"
+                type="submit"
+              />
+            </DialogActions>
+          </form>
         </DialogContent>
-        <DialogActions>
-          <NormalButton
-            className={styles.modalButtons}
-            text="Cancel"
-            onClick={handleClose}
-          />
-          <NormalButton
-            className={styles.modalButtons}
-            text="Login"
-            onClick={loginHandler}
-          />
-        </DialogActions>
       </Dialog>
     </div>
   );

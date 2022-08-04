@@ -1,9 +1,9 @@
+import React from "react";
 import { motion } from "framer-motion";
-import BlogMasthead from "../../components/blog/blog-masthead/BlogMasthead";
-import BlogSection from "../../components/blog/blog-section/BlogSection";
+import FullBlog from "../../../components/blog/blog-fullpage/FullBlog";
 import Head from "next/head";
 
-export default function Blog() {
+export default function index() {
   return (
     <motion.h1
       initial={{ opacity: 0 }}
@@ -13,8 +13,7 @@ export default function Blog() {
       <Head>
         <title>Brandon&apos;s Blog</title>
       </Head>
-      <BlogMasthead />
-      <BlogSection />
+      <FullBlog />
     </motion.h1>
   );
 }
