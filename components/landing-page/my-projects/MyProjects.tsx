@@ -11,7 +11,12 @@ type Props = {
 
 export default function MyProjects(props: Props) {
   const gdocFeaturedProjects = ["React.js", "MongoDB", "SocketIO", "Quill"];
-  const covTrackFeaturedProjects = ["React.js", "Material UI", "Chart.js"];
+  const covTrackFeaturedProjects = [
+    "React.js",
+    "API",
+    "Material UI",
+    "Chart.js",
+  ];
 
   return (
     <section id={props.id} className={styles.projectsSection}>
