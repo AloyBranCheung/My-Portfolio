@@ -28,7 +28,7 @@ export default function BlogPreviewCard({
       className={`${styles.gridContainer} ${className}`}
     >
       <h1 onClick={imageClickHandler} className={styles.title}>
-        {title}
+        {title.toLowerCase()}
       </h1>
       <p onClick={imageClickHandler} className={styles.description}>
         {description}
