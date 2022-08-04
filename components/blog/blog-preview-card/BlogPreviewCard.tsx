@@ -1,7 +1,6 @@
-import React from "react";
+import React, { SyntheticEvent } from "react";
 import Image from "next/image";
 import styles from "./BlogPreviewCard.module.css";
-import { useRouter } from "next/router";
 
 type Props = {
   className?: string;
@@ -10,6 +9,7 @@ type Props = {
   timeStamp: string;
   imgSrc: string;
   id: string;
+  imageClickHandler: (event: SyntheticEvent) => void;
 };
 
 export default function BlogPreviewCard({
@@ -19,14 +19,11 @@ export default function BlogPreviewCard({
   timeStamp,
   imgSrc,
   id,
+  imageClickHandler,
 }: Props) {
-  const router = useRouter();
-  const imageClickHandler = () => {
-    router.push(`/blog/${id}`);
-  };
-
   return (
     <article
+      id={id}
       onClick={imageClickHandler}
       className={`${styles.gridContainer} ${className}`}
     >
@@ -39,7 +36,11 @@ export default function BlogPreviewCard({
       <time onClick={imageClickHandler} className={styles.timeStamp}>
         {timeStamp}
       </time>
-      <div onClick={imageClickHandler} className={styles.imageContainer}>
+      <div
+        id={id}
+        onClick={imageClickHandler}
+        className={styles.imageContainer}
+      >
         <Image
           className={styles.image}
           height="1080px"

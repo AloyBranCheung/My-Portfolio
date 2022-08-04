@@ -23,8 +23,21 @@
 
 .paragraph {
   margin-top: 5%;
+  font-size: 2rem;
 }
 
 .timeStamp {
   margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .blogContainer {
+    padding-top: 15%;
+  }
+}
+
+@media (max-width: 400px) {
+  .blogContainer {
+    padding-top: 20%;
+  }
 }

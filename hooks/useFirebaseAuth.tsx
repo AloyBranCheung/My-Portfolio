@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { initializeApp } from "firebase/app";
 import {
@@ -31,6 +31,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export default function useFirebaseAuth() {
+  const [blogs, setBlogs] = useState<{}[]>([]);
   const authCtx = useContext(AuthContext);
   // Firebase Auth
   const auth = getAuth(app);
@@ -59,7 +60,6 @@ export default function useFirebaseAuth() {
         const errorMessage = error.message;
         console.log(errorCode);
         console.log(errorMessage);
-        loginStatus();
       });
   };
 
@@ -73,13 +73,12 @@ export default function useFirebaseAuth() {
       .catch((error) => {
         console.log(error.code);
         console.log(error.message);
-        loginStatus();
       });
   };
 
   // Firebase DB
   const db = getDatabase(app);
-  const dbBlogs = ref(db, "blogs");
+  const dbRef = ref(db, "blogs");
 
   // WRITE Firebase DB
   const writeBlogData = (
@@ -89,7 +88,7 @@ export default function useFirebaseAuth() {
     date: string,
     _id: string
   ) => {
-    push(dbBlogs, {
+    push(dbRef, {
       title: title,
       description: description,
       imgUrl: imgUrl,
@@ -102,18 +101,5 @@ export default function useFirebaseAuth() {
       });
   };
 
-  // READ Firebase DB
-  const readBlogData = () => {
-    const db = getDatabase(app);
-    const dbRef = ref(db, "blogs");
-    let newArrObj;
-    onValue(dbRef, (snapshot) => {
-      newArrObj = Object.values(snapshot.val());
-      console.log(newArrObj); // I can see the array of objects in console.log
-    });
-
-    return newArrObj;
-  };
-
-  return { login, logout, loginStatus, writeBlogData, readBlogData };
+  return { login, logout, loginStatus, writeBlogData };
 }

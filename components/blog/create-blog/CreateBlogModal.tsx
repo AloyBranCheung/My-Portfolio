@@ -26,7 +26,7 @@ export default function LoginModal({
   const titleRef = useRef<HTMLInputElement>();
   const imgUrlRef = useRef<HTMLInputElement>();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const dateRef = useRef<HTMLInputElement>();
+  const dateRef = useRef<HTMLInputElement>(null);
 
   const formSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -38,7 +38,7 @@ export default function LoginModal({
   };
 
   const date = new Date();
-  const todayDate = date.toISOString();
+  const todayDate = date.toISOString().substring(0, 10);
 
   return (
     <div>
@@ -58,7 +58,11 @@ export default function LoginModal({
             />
             <input ref={dateRef} defaultValue={todayDate} />
             <div className={styles.textareaContainer}>
-              <textarea ref={textareaRef} required />
+              <textarea
+                className={styles.textArea}
+                ref={textareaRef}
+                required
+              />
             </div>
             <TextField
               inputRef={imgUrlRef}

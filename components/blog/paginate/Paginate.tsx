@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import BlogPreviewCard from "../blog-preview-card/BlogPreviewCard";
 import styles from "./Paginate.module.css";
+import { useRouter } from "next/router";
 
 type Props = {
   blogs: {
-    title: string;
+    firebaseKey: string;
+    date: string;
     description: string;
-    timeStamp: string;
-    imgSrc: string;
-    id: string;
+    imgUrl: string;
+    title: string;
+    _id: string;
   }[];
 };
 
 export default function PaginatedItems({ blogs }: Props) {
+  const router = useRouter();
   // We start with an empty list of items.
   const [currentItems, setCurrentItems] = useState<
     {
-      title: string;
+      firebaseKey: string;
+      date: string;
       description: string;
-      timeStamp: string;
-      imgSrc: string;
-      id: string;
+      imgUrl: string;
+      title: string;
+      _id: string;
     }[]
   >([]);
   const [pageCount, setPageCount] = useState(0);
@@ -41,18 +45,24 @@ export default function PaginatedItems({ blogs }: Props) {
     setItemOffset(newOffset);
   };
 
+  // go to full page click handler
+  const onClickHandler = (event: SyntheticEvent) => {
+    const blogId = event.currentTarget.id;
+    router.push(`/blog/${blogId}`);
+  };
+
   const blogMap = (
     <>
       {currentItems.map((blog) => {
         return (
           <BlogPreviewCard
-            key={blog.id}
-            id={blog.id}
+            key={blog.firebaseKey}
             title={blog.title}
             description={blog.description}
-            timeStamp={blog.timeStamp}
-            imgSrc={blog.imgSrc}
-            className={styles.gridCard}
+            timeStamp={blog.date}
+            imgSrc={blog.imgUrl}
+            id={blog._id}
+            imageClickHandler={onClickHandler}
           />
         );
       })}

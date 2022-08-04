@@ -70,25 +70,31 @@
 }
 
 @media (max-width: 768px) {
+  .gridContainer {
+    margin-top: 5%;
+  }
   .imageContainer {
     grid-column: 1/-1;
-    filter: blur(5px) contrast(1);
+    grid-row: 1/5;
   }
 
   .title {
     margin-top: 5%;
     padding: 2% 7%;
     grid-column: 1/-1;
+    grid-row: 5/6;
   }
 
   .description {
     padding: 2% 7%;
     grid-column: 1/-1;
+    grid-row: 6/7;
   }
 
   .timeStamp {
     padding: 2% 7%;
     grid-column: 1/-1;
     margin-bottom: 5%;
+    grid-row: 7/8;
   }
 }

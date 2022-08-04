@@ -1,42 +1,82 @@
 import styles from "./FullBlog.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NormalButton from "../../UI/NormalButton";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
 export default function FullBlog() {
+  const [currBlog, setCurrBlog] = useState<{
+    firebaseKey: string;
+    date: string;
+    description: string;
+    imgUrl: string;
+    title: string;
+    _id: string;
+  }>({
+    firebaseKey: "",
+    date: "",
+    description: "",
+    imgUrl: "",
+    title: "",
+    _id: "",
+  });
   const router = useRouter();
+  const thisPage = router.query.blogId;
+
+  // back button
   const backClickHandler = () => {
     router.back();
   };
-  console.log(router.query);
+
+  // fetch blogs
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        "https://my-portfolio-5ff59-default-rtdb.firebaseio.com/blogs.json"
+      );
+      const resData = await response.json();
+      const loadedBlogs = [];
+      for (const key in resData) {
+        const blog = resData[key];
+        loadedBlogs.push({
+          firebaseKey: key,
+          date: blog.date,
+          description: blog.description,
+          imgUrl: blog.imgUrl,
+          title: blog.title,
+          _id: blog._id,
+        });
+      }
+      const currBlog = loadedBlogs.filter((blogObj) => {
+        return blogObj._id === thisPage;
+      });
+
+      const finalObj = Object.assign(currBlog[0]);
+
+      setCurrBlog(finalObj);
+    };
+    fetchData().catch((err) => console.error(err));
+  }, [thisPage]);
 
   return (
-    <div className={styles.blogContainer}>
+    <div id={currBlog._id} className={styles.blogContainer}>
       <NormalButton
-        className={styles.backButton}
         text="Back"
         onClick={backClickHandler}
+        className={styles.backButton}
       />
-      <div className={styles.blogContent}></div>
-      <Image
-        src="https://images.unsplash.com/photo-1606228281437-dc226988dc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        alt="cover-photo"
-        layout="responsive"
-        height="1080px"
-        width="1920px"
-      />
-      <h1 className={styles.blogTitle}>blog title</h1>
-      <p className={styles.paragraph}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p className={styles.timeStamp}>0000-00-00</p>
+      <div className={styles.blogContent}>
+        <Image
+          src={currBlog.imgUrl}
+          alt="cover-photo"
+          layout="responsive"
+          height="1080px"
+          width="1920px"
+        />
+        <h1 className={styles.blogTitle}>{currBlog.title}</h1>
+        <p className={styles.paragraph}>{currBlog.description}</p>
+        <p className={styles.timeStamp}>{currBlog.date}</p>
+      </div>
     </div>
   );
 }
