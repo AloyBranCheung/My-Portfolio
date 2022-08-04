@@ -27,6 +27,7 @@ export default function FeaturedProject(props: Props) {
             className={styles.image}
             src={props.imgSrc}
             alt="alt-picture"
+            priority={true}
           />
         </a>
       </Link>
