@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import LaunchIcon from "@mui/icons-material/Launch";
 import SecondaryCard from "../../../UI/SecondaryCard";
+
 type Props = {
   className: string;
   imgSrc: any;
@@ -14,14 +15,21 @@ type Props = {
   techStack: string[];
   githubUrl: string;
   deployUrl: string;
+  redirectUrl: string;
 };
 
 export default function FeaturedProject(props: Props) {
   return (
     <li className={`${styles.gridContainer} ${props.className}`}>
-      <div className={styles.imageWrapper}>
-        <Image className={styles.image} src={props.imgSrc} alt="alt-picture" />
-      </div>
+      <Link href={props.redirectUrl} className={styles.imageWrapper}>
+        <a target="_blank" className={styles.imageWrapper}>
+          <Image
+            className={styles.image}
+            src={props.imgSrc}
+            alt="alt-picture"
+          />
+        </a>
+      </Link>
 
       <div className={styles.projectContent}>
         <div className={styles.title}>

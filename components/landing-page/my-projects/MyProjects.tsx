@@ -22,6 +22,7 @@ export default function MyProjects(props: Props) {
           titleProject="Live Text Editor"
           description="A google docs clone. This full-stack web application was built around Quill, which is an API driven rich text editor. The live editing between multiple users was enabled with SocketIO."
           techStack={featuredProjects}
+          redirectUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
           githubUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
           deployUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
         />
