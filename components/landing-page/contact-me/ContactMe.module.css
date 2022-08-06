@@ -59,7 +59,7 @@
 }
 
 .contactFormContainer {
-  background-color: var(--main-color);
+  background: var(--gradient);
   border-radius: 15px 20px;
   padding: 10% 20%;
   display: grid;

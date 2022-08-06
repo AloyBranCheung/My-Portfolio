@@ -9,6 +9,7 @@
   --main-color: #5cdb95;
   --secondary-color: #edf5e1; /*card background too */
   --text: #05386b;
+  --gradient: linear-gradient(90deg, #a8ff78, #78ffd6);
 
   --animation-reveal: reveal;
   --animation-bounce: bounce;
@@ -89,7 +90,7 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  background-color: var(--main-color);
+  background: var(--gradient);
   color: var(--text);
 }
 
