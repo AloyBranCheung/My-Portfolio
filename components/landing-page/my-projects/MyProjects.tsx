@@ -32,9 +32,9 @@ export default function MyProjects(props: Props) {
           titleProject="Booking Clone App"
           description="Booking Clone App is a clone of booking.com. This app has user authentication using JWT, a search bar function, and a booking function that checks if the dates for a specific room/location are booked. An admin panel is also included for content management. The frontend uses React and Material UI while the admin panel uses React and Sass. The backend uses Node/Express.js and MongoDB to manage the data."
           techStack={bookingApp}
-          redirectUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
-          githubUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
-          deployUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+          redirectUrl="https://github.com/AloyBranCheung/booking-clone-app"
+          githubUrl="https://github.com/AloyBranCheung/booking-clone-app"
+          deployUrl="https://github.com/AloyBranCheung/booking-clone-app"
         />
 
         <AltFeaturedProject
