@@ -4,6 +4,7 @@ import OtherProjects from "./other-projects/OtherProjects";
 import gdocSample from "../../../public/assets/images/gdocs sample.gif";
 import covidTrackerSample from "../../../public/assets/images/covid19-tracker.gif";
 import AltFeaturedProject from "./featured-project/AltFeaturedProject";
+import BookingSample from "../../../public/assets/images/BookingSample.gif";
 
 type Props = {
   id: string;
@@ -17,12 +18,25 @@ export default function MyProjects(props: Props) {
     "Material UI",
     "Chart.js",
   ];
+  const bookingApp = ["React.js", "Node.js", "Express.js", "MongoDB"];
 
   return (
     <section id={props.id} className={styles.projectsSection}>
       <h1 className={styles.header}>Some things I&apos;ve built. . .</h1>
 
       <ul className={styles.listOfProjectsContainer}>
+        <FeaturedProject
+          className={styles.project}
+          imgSrc={BookingSample}
+          heading="Featured Project"
+          titleProject="Booking Clone App"
+          description="Booking Clone App is a clone of booking.com. This app has user authentication using JWT, a search bar function, and a booking function that checks if the dates for a specific room/location are booked. An admin panel is also included for content management. The frontend uses React and Material UI while the admin panel uses React and Sass. The backend uses Node/Express.js and MongoDB to manage the data."
+          techStack={bookingApp}
+          redirectUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+          githubUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+          deployUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+        />
+
         <AltFeaturedProject
           className={styles.project}
           imgSrc={covidTrackerSample}
