@@ -40,18 +40,6 @@ export default function BlogMasthead() {
     logout();
   };
 
-  // create a blog
-  const createBlogSubmitHandler = (
-    title: string,
-    imageUrl: string,
-    textArea: string,
-    date: string
-  ) => {
-    const _id = uuidv4();
-    writeBlogData(title, textArea, imageUrl, date, _id);
-    handleClose();
-  };
-
   return (
     <section className={styles.blogMasthead}>
       {!authCtx.isLoggedIn && (
