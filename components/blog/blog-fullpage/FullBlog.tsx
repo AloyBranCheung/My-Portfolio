@@ -4,7 +4,7 @@ import NormalButton from "../../UI/NormalButton";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import QuillReader from "../../quill/QuillReader";
-import { deleteApp } from "firebase/app";
+import { CircularProgress } from "@mui/material";
 
 export default function FullBlog() {
   const [currBlog, setCurrBlog] = useState<{
@@ -62,6 +62,20 @@ export default function FullBlog() {
     };
     fetchData().catch((err) => console.error(err));
   }, [thisPage]);
+
+  useEffect(() => {
+    if (currBlog._id.length === 0) {
+      router.replace("/blog");
+    }
+  });
+
+  if (currBlog._id.length === 0) {
+    return (
+      <div className={styles.unauthorized}>
+        <CircularProgress />
+      </div>
+    );
+  }
 
   return (
     <div id={currBlog._id} className={styles.blogContainer}>

@@ -19,9 +19,9 @@ export default function CreateBlogPage() {
   if (!isLoggedIn) {
     return (
       <div className={styles.unauthorizedContainer}>
-        <h1 className={styles.unauthorized}>
+        <div className={styles.unauthorized}>
           <CircularProgress />
-        </h1>
+        </div>
       </div>
     );
   }
