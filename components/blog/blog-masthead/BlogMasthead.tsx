@@ -5,10 +5,11 @@ import NormalButton from "../../UI/NormalButton";
 import { Parallax } from "react-scroll-parallax";
 import LoginModal from "../login-modal/LoginModal";
 import useFirebaseAuth from "../../../hooks/useFirebaseAuth";
-import CreateBlogModal from "../create-blog/CreateBlogModal";
 import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/router";
 
 export default function BlogMasthead() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const { login, logout, writeBlogData } = useFirebaseAuth();
   const authCtx = useContext(AuthContext);
@@ -23,6 +24,11 @@ export default function BlogMasthead() {
     setIsOpen(true);
   };
 
+  // navigate to createBlog page
+  const createBlog = () => {
+    router.push("/createBlog");
+  };
+
   // login with firebase
   const submitLoginHandler = (email: string, password: string) => {
     login(email, password);
@@ -34,27 +40,9 @@ export default function BlogMasthead() {
     logout();
   };
 
-  // create a blog
-  const createBlogSubmitHandler = (
-    title: string,
-    imageUrl: string,
-    textArea: string,
-    date: string
-  ) => {
-    const _id = uuidv4();
-    writeBlogData(title, textArea, imageUrl, date, _id);
-    handleClose();
-  };
-
   return (
     <section className={styles.blogMasthead}>
-      {authCtx.isLoggedIn ? (
-        <CreateBlogModal
-          isOpen={isOpen}
-          handleClose={handleClose}
-          submitHandler={createBlogSubmitHandler}
-        />
-      ) : (
+      {!authCtx.isLoggedIn && (
         <LoginModal
           isOpen={isOpen}
           handleClose={handleClose}
@@ -71,7 +59,7 @@ export default function BlogMasthead() {
               <>
                 <NormalButton
                   className={styles.loginButton}
-                  onClick={openLoginModal}
+                  onClick={createBlog}
                   text="Create a blog"
                 />
                 <NormalButton
