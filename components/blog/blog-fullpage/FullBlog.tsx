@@ -66,7 +66,6 @@ export default function FullBlog() {
   if (currBlog._id.length === 0) {
     return (
       <div className={styles.unauthorized}>
-        <h1>Not a valid blog, please go back.</h1>
         <CircularProgress />
       </div>
     );
