@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { initializeApp } from "firebase/app";
 import {
@@ -9,7 +9,7 @@ import {
   signOut,
 } from "firebase/auth";
 
-import { getDatabase, onValue, push, ref } from "firebase/database";
+import { getDatabase, push, ref } from "firebase/database";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -31,7 +31,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export default function useFirebaseAuth() {
-  const [blogs, setBlogs] = useState<{}[]>([]);
   const authCtx = useContext(AuthContext);
   // Firebase Auth
   const auth = getAuth(app);
@@ -86,7 +85,8 @@ export default function useFirebaseAuth() {
     description: string,
     imgUrl: string,
     date: string,
-    _id: string
+    _id: string,
+    delta: {}
   ) => {
     push(dbRef, {
       title: title,
@@ -94,6 +94,7 @@ export default function useFirebaseAuth() {
       imgUrl: imgUrl,
       date: date,
       _id: _id,
+      delta,
     })
       .then(() => console.log("success"))
       .catch((error) => {

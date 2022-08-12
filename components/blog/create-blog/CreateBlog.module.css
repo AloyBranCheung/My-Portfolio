@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.previewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5%;
+}
+
+.wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.quillContainer {
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  gap: 10%;
+}
+
+.btn {
+  background: var(--secondary-color);
+}

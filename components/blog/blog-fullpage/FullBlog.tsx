@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import NormalButton from "../../UI/NormalButton";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import QuillReader from "../../quill/QuillReader";
+import { deleteApp } from "firebase/app";
 
 export default function FullBlog() {
   const [currBlog, setCurrBlog] = useState<{
@@ -12,6 +14,7 @@ export default function FullBlog() {
     imgUrl: string;
     title: string;
     _id: string;
+    delta: {};
   }>({
     firebaseKey: "",
     date: "",
@@ -19,6 +22,7 @@ export default function FullBlog() {
     imgUrl: "",
     title: "",
     _id: "",
+    delta: {},
   });
   const router = useRouter();
   const thisPage = router.query.blogId;
@@ -45,6 +49,7 @@ export default function FullBlog() {
           imgUrl: blog.imgUrl,
           title: blog.title,
           _id: blog._id,
+          delta: blog.delta,
         });
       }
       const currBlog = loadedBlogs.filter((blogObj) => {
@@ -60,11 +65,7 @@ export default function FullBlog() {
 
   return (
     <div id={currBlog._id} className={styles.blogContainer}>
-      <NormalButton
-        text="Back"
-        onClick={backClickHandler}
-        className={styles.backButton}
-      />
+      <NormalButton text="Back" onClick={backClickHandler} />
       <div className={styles.blogContent}>
         <Image
           src={currBlog.imgUrl}
@@ -74,8 +75,8 @@ export default function FullBlog() {
           width="1920px"
         />
         <h1 className={styles.blogTitle}>{currBlog.title}</h1>
-        <p className={styles.paragraph}>{currBlog.description}</p>
         <p className={styles.timeStamp}>{currBlog.date}</p>
+        <QuillReader readContents={currBlog.delta} />
       </div>
     </div>
   );

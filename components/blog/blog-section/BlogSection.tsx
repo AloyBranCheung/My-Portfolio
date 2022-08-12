@@ -14,6 +14,8 @@ export default function BlogSection() {
       _id: string;
     }[]
   >([]);
+
+  // display blogs posted, set to state and sent to <Paginate /> component
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
