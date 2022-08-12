@@ -32,12 +32,14 @@
 
 .unauthorized {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: var(--gradient);
   align-items: center;
   text-align: center;
   justify-content: center;
   color: white;
+  gap: 10%;
 }
 
 @media (max-width: 768px) {

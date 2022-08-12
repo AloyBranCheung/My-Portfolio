@@ -63,15 +63,10 @@ export default function FullBlog() {
     fetchData().catch((err) => console.error(err));
   }, [thisPage]);
 
-  useEffect(() => {
-    if (currBlog._id.length === 0) {
-      router.replace("/blog");
-    }
-  });
-
   if (currBlog._id.length === 0) {
     return (
       <div className={styles.unauthorized}>
+        <h1>Not a valid blog, please go back.</h1>
         <CircularProgress />
       </div>
     );
