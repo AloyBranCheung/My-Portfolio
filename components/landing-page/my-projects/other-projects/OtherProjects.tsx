@@ -5,6 +5,15 @@ export default function OtherProjects() {
   return (
     <li className={styles.otherProjectsContainer}>
       <OtherProjectCard
+        title="Live Text Editor"
+        cardStyle={`${styles.card1}`}
+        description="A google docs clone. This full-stack web application was built around Quill, which is an API driven rich text editor. The live editing between multiple users was enabled with SocketIO."
+        descriptionStyle={styles.description}
+        githubUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+        deployUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
+        techStack="Techs: React, MongoDB, SocketIO, Quill"
+      ></OtherProjectCard>
+      <OtherProjectCard
         title="GOAT Quotes"
         cardStyle={`${styles.card1}`}
         description="A full-stack website that displays quotes generated from APIs like Kanye REST."
@@ -30,15 +39,6 @@ export default function OtherProjects() {
         githubUrl="https://github.com/AloyBranCheung/ReactMeals"
         deployUrl="https://aquamarine-capybara-5f358f.netlify.app/"
         techStack="Techs: React.js, Styled-components, Firebase"
-      ></OtherProjectCard>
-      <OtherProjectCard
-        title="Redux Cart"
-        cardStyle={`${styles.card1}`}
-        description="Add/remove items to a cart, connected to firebase for cart persistence"
-        descriptionStyle={styles.description}
-        githubUrl="https://github.com/AloyBranCheung/ReduxCart"
-        deployUrl="https://incredible-torrone-9191df.netlify.app/"
-        techStack="Techs: React/Next.js, React Redux, Firebase"
       ></OtherProjectCard>
     </li>
   );

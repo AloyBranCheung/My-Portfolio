@@ -1,17 +1,17 @@
 import styles from "./MyProjects.module.css";
 import FeaturedProject from "./featured-project/FeaturedProject";
 import OtherProjects from "./other-projects/OtherProjects";
-import gdocSample from "../../../public/assets/images/gdocs sample.gif";
 import covidTrackerSample from "../../../public/assets/images/covid19-tracker.gif";
 import AltFeaturedProject from "./featured-project/AltFeaturedProject";
 import BookingSample from "../../../public/assets/images/BookingSample.gif";
+import chatDemo from "../../../public/assets/images/chat demo.gif";
 
 type Props = {
   id: string;
 };
 
 export default function MyProjects(props: Props) {
-  const gdocFeaturedProjects = ["React.js", "MongoDB", "SocketIO", "Quill"];
+  const chatdemo = ["React.js", "MongoDB", "SocketIO", "Node/Express.js"];
   const covTrackFeaturedProjects = [
     "React.js",
     "API",
@@ -25,6 +25,17 @@ export default function MyProjects(props: Props) {
       <h1 className={styles.header}>Some things I&apos;ve built. . .</h1>
 
       <ul className={styles.listOfProjectsContainer}>
+        <AltFeaturedProject
+          className={styles.project}
+          imgSrc={chatDemo}
+          heading="Featured Project"
+          titleProject="Neobrutalistic Chat App"
+          description="To learn more about neobrutalism web design, I made a fullstack chat app based around neobrutalistic design. Through SocketIO, users can join a room and live chat with other users."
+          techStack={chatdemo}
+          redirectUrl="https://silly-narwhal-3281d0.netlify.app/"
+          githubUrl="https://github.com/AloyBranCheung/neobrutalistic-chat-app"
+          deployUrl="https://silly-narwhal-3281d0.netlify.app/"
+        />
         <FeaturedProject
           className={styles.project}
           imgSrc={BookingSample}
@@ -47,17 +58,6 @@ export default function MyProjects(props: Props) {
           redirectUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
           githubUrl="https://github.com/AloyBranCheung/Covid19-Tracker-App"
           deployUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
-        />
-        <FeaturedProject
-          className={styles.project}
-          imgSrc={gdocSample}
-          heading="Featured Project"
-          titleProject="Live Text Editor"
-          description="A google docs clone. This full-stack web application was built around Quill, which is an API driven rich text editor. The live editing between multiple users was enabled with SocketIO."
-          techStack={gdocFeaturedProjects}
-          redirectUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
-          githubUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
-          deployUrl="https://github.com/AloyBranCheung/GoogleDocs-Clone"
         />
         <OtherProjects />
       </ul>
