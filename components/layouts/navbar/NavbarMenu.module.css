@@ -1,79 +1,42 @@
 .menuList {
+  display: none;
   height: 100%;
   font-size: 2rem;
-  font-family: "ComicCat";
 }
 
 .menuList ul {
   margin: 0;
-  padding: 0;
+  padding: 7%;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
 }
 
 .menuList li {
   list-style: none;
   transition: all 0.3s ease-in;
+  background-color: var(--secondary-color);
+  border: 2px solid black;
+  box-shadow: var(--main-shadow);
 }
 
 .menuList li a {
   text-decoration: none;
-  padding: 1rem;
+  padding: 1rem 3rem;
   display: block;
 }
 
-@media (hover: hover) {
-  .menuList li:hover {
-    font-size: 2.5rem;
-    transition: all 0.3s ease-out;
-  }
-}
-
-@media (max-width: 1200px) {
-  .menuList {
-    display: none;
-    width: 100%;
-    background: var(--gradient);
-    border-radius: 10px;
-    margin-top: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    animation: growDown 300ms ease-in-out forwards;
-    transform-origin: top center;
-  }
-
-  .menuList ul {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    padding-top: 1rem;
-  }
-
-  .menuList li {
-    margin-top: 3rem;
-  }
-
-  .menuListActive {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    top: 5rem;
-    height: 110vh;
-    z-index: 100;
-    right: 0rem;
-  }
-
-  @keyframes growDown {
-    0% {
-      transform: scaleY(0);
-    }
-    80% {
-      transform: scaleY(1.1);
-    }
-
-    100% {
-      transform: scaleY(1);
-    }
-  }
+.menuListActive {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 8.5rem;
+  width: 99%;
+  height: 100vh;
+  background-color: var(--main-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
 }
 
 .bounceEffect {
@@ -90,4 +53,32 @@
   opacity: 0;
   animation: var(--animation-bounce) 1s ease-out 0.5s forwards,
     var(--animation-reveal) 1s ease-out 0.5s forwards;
+}
+
+@media (min-width: 1200px) {
+  .menuList {
+    display: flex;
+  }
+  .menuList ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menuListActive {
+    display: none;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }

@@ -1,11 +1,10 @@
 .mainButton {
-  background: var(--gradient);
-  color: var(--text);
-  border-radius: 5px;
-  border: 0;
+  background-color: var(--main-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
   padding: 1rem;
-  font-size: 2rem;
   font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 @media (hover: hover) {

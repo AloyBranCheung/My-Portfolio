@@ -30,7 +30,7 @@ export default function MyProjects(props: Props) {
           imgSrc={chatDemo}
           heading="Featured Project"
           titleProject="Neobrutalistic Chat App"
-          description="To learn more about neobrutalism web design, I made a fullstack chat app based around neobrutalistic design. Through SocketIO, users can join a room and live chat with other users."
+          description="To learn more about neobrutalism web design, I made a fullstack chat app based around neobrutalistic design. Through SocketIO, users can join a room and live chat with other users. I loved using Tailwind CSS here."
           techStack={chatdemo}
           redirectUrl="https://silly-narwhal-3281d0.netlify.app/"
           githubUrl="https://github.com/AloyBranCheung/neobrutalistic-chat-app"

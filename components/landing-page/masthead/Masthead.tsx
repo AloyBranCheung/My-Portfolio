@@ -1,7 +1,5 @@
-import TypeEffect from "./TypeEffect";
 import styles from "./Masthead.module.css";
 import MainButton from "../../UI/MainButton";
-import { Parallax } from "react-scroll-parallax";
 import { useRouter } from "next/router";
 
 export default function Masthead() {
@@ -14,25 +12,24 @@ export default function Masthead() {
   };
   return (
     <section className={styles.mastContainer}>
-      <Parallax speed={-10}>
-        <div className={styles.typewriterContainer}>
-          <TypeEffect className={styles.textEffect} />
-        </div>
-      </Parallax>
-      <Parallax speed={-10}>
-        <div className={styles.buttonContainer}>
-          <MainButton
-            className={styles.mainButton}
-            text="My Projects"
-            clickHandler={projectsClickHandler}
-          />
-          <MainButton
-            className={styles.mainButton}
-            text="Contact Me"
-            clickHandler={contactMeClickHandler}
-          />
-        </div>
-      </Parallax>
+      <div className={styles.mastText}>
+        <h1>
+          Hi! I&apos;m Brandon. I&apos;m a software developer. I make cool
+          things for the web.
+        </h1>
+      </div>
+      <div className={styles.buttonContainer}>
+        <MainButton
+          className={styles.mainButton}
+          text="My Projects"
+          clickHandler={projectsClickHandler}
+        />
+        <MainButton
+          className={styles.mainButton}
+          text="Contact Me"
+          clickHandler={contactMeClickHandler}
+        />
+      </div>
     </section>
   );
 }

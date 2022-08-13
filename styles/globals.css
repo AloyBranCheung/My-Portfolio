@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap");
 @font-face {
   font-family: "ComicCat";
@@ -6,8 +7,10 @@
 
 /* *********************************** global variables *********************************** */
 :root {
-  --main-color: #5cdb95;
-  --secondary-color: #edf5e1; /*card background too */
+  --main-color: #fcf8e8;
+  --main-shadow: 8px 10px 0 black;
+  --main-border: 2px solid black;
+  --secondary-color: #94b49f; /*card background too */
   --text: #05386b;
   --gradient: linear-gradient(90deg, #a8ff78, #78ffd6);
 
@@ -16,6 +19,8 @@
   --animation-bounceWoops: bounceWoops;
   --animation-growDown: grownDown;
 }
+
+/* https://colorhunt.co/palette/fcf8e894b49fdf786176549a */
 
 /* @media (max-width: 769px) { */
 
@@ -79,7 +84,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Raleway";
+  font-family: "Josefin Sans", sans-serif;
 }
 
 html {
@@ -90,8 +95,8 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  background: var(--gradient);
-  color: var(--text);
+  background: var(--main-color);
+  color: black;
 }
 
 a {

@@ -1,37 +1,32 @@
 .mastContainer {
-  height: 100vh;
   display: flex;
+  min-height: 25vh;
   justify-content: center;
   flex-direction: column;
-  padding: 0 20rem;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--secondary-color);
   margin: 6% 5%;
-  border-radius: 10px 15px;
-  /* background-image: url("../../../public/assets/images/hrvoje_photography-4TVbbaNAw9Q-unsplash.jpg");
-  background-size: cover; */
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
   overflow: hidden;
+  padding: 5%;
+}
+
+.mastText {
+  padding: 0 8%;
 }
 
 .buttonContainer {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  margin-top: 5rem;
-  width: 100%;
-}
-
-.textEffect {
-  animation: var(--animation-reveal) 0.5s ease-out;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .mainButton {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 1.5rem;
-  margin-left: 3rem;
-  margin-right: 1rem;
   transform: scale(0.9);
-  font-family: "ComicCat";
   transition: all 0.03s ease-in;
   animation: var(--animation-reveal) 0.5s ease-out;
 }
@@ -54,26 +49,14 @@
   }
 }
 
-@media (max-width: 769px) {
-  .mainButton {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 768px) {
+  .mastContainer {
+    max-width: 768px;
   }
 }
 
-@media (max-width: 769px) {
+@media (min-width: 1200px) {
   .mastContainer {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-  .buttonContainer {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
+    gap: 50px;
   }
 }
