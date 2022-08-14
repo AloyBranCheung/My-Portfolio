@@ -1,5 +1,5 @@
 .menuList {
-  display: none;
+  display: flex;
   height: 100%;
   font-size: 2rem;
 }
@@ -27,18 +27,6 @@
   display: block;
 }
 
-.menuListActive {
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 8.5rem;
-  width: 99%;
-  height: 100vh;
-  background-color: var(--main-color);
-  border: var(--main-border);
-  box-shadow: var(--main-shadow);
-}
-
 .bounceEffect {
   opacity: 0;
   animation: var(--animation-bounce) 1s ease-out forwards,
@@ -55,6 +43,25 @@
     var(--animation-reveal) 1s ease-out 0.5s forwards;
 }
 
+@media (max-width: 1200px) {
+  .menuList {
+    display: none;
+  }
+
+  .menuListActive {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 8.5rem;
+    width: 99%;
+    height: 100vh;
+    background-color: var(--main-color);
+    border: var(--main-border);
+    box-shadow: var(--main-shadow);
+    text-align: center;
+  }
+}
+
 @media (min-width: 1200px) {
   .menuList {
     display: flex;
@@ -63,10 +70,6 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-  }
-
-  .menuListActive {
-    display: none;
   }
 }
 

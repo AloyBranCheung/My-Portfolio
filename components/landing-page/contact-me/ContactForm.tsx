@@ -2,11 +2,7 @@ import styles from "./ContactForm.module.css";
 import { useForm, ValidationError } from "@formspree/react";
 import { useRef } from "react";
 
-type Props = {
-  className: string;
-};
-
-export default function ContactForm(props: Props) {
+export default function ContactForm() {
   const nameRef = useRef<any>("");
   const subjectRef = useRef<any>("");
   const data: any = {
@@ -17,14 +13,14 @@ export default function ContactForm(props: Props) {
   const [state, handleSubmit] = useForm("mqkjzzyg", data);
 
   return (
-    <>
+    <div className={styles.container}>
       {state.succeeded && (
         <div className={styles.thanks}>
           <h1>Thank you for your submission :D.</h1>
         </div>
       )}
       {!state.succeeded && (
-        <div className={props.className}>
+        <div className={styles.formWrapper}>
           <form onSubmit={handleSubmit} className={styles.formContainer}>
             <div className={styles.nameContainer}>
               <label htmlFor="name">Name</label>
@@ -82,17 +78,18 @@ export default function ContactForm(props: Props) {
                 errors={state.errors}
               />
             </div>
-
-            <button
-              type="submit"
-              className={styles.submitButton}
-              disabled={state.submitting}
-            >
-              Submit
-            </button>
+            <div className={styles.buttonContainer}>
+              <button
+                type="submit"
+                className={styles.submitButton}
+                disabled={state.submitting}
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       )}
-    </>
+    </div>
   );
 }

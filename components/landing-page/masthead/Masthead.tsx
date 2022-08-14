@@ -12,23 +12,23 @@ export default function Masthead() {
   };
   return (
     <section className={styles.mastContainer}>
-      <div className={styles.mastText}>
+      <div className={styles.introContainer}>
         <h1>
           Hi! I&apos;m Brandon. I&apos;m a software developer. I make cool
           things for the web.
         </h1>
-      </div>
-      <div className={styles.buttonContainer}>
-        <MainButton
-          className={styles.mainButton}
-          text="My Projects"
-          clickHandler={projectsClickHandler}
-        />
-        <MainButton
-          className={styles.mainButton}
-          text="Contact Me"
-          clickHandler={contactMeClickHandler}
-        />
+        <div className={styles.buttonContainer}>
+          <MainButton
+            className={styles.mainButton}
+            text="My Projects"
+            clickHandler={projectsClickHandler}
+          />
+          <MainButton
+            className={styles.mainButton}
+            text="Contact Me"
+            clickHandler={contactMeClickHandler}
+          />
+        </div>
       </div>
     </section>
   );

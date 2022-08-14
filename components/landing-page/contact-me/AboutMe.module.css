@@ -1,10 +1,19 @@
-.linksContainer {
-  margin-top: 12%;
+.container {
+  padding: 5%;
+  border: var(--main-border);
   display: flex;
-  justify-content: space-around;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
 }
 
 .links {
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex: 2;
+  }
 }

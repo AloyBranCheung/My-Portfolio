@@ -59,7 +59,9 @@ export default function MyProjects(props: Props) {
           githubUrl="https://github.com/AloyBranCheung/Covid19-Tracker-App"
           deployUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
         />
-        <OtherProjects />
+        <div className={styles.otherProjectsContainer}>
+          <OtherProjects />
+        </div>
       </ul>
     </section>
   );

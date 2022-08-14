@@ -34,6 +34,9 @@
   display: flex;
   transform: scale(2);
   top: 2.5rem;
+  background-color: white;
+  border: var(--main-border);
+  box-shadow: 1.5px 2px black;
 }
 
 @media (min-width: 768px) {

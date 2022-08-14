@@ -11,10 +11,8 @@ export default function ContactMe(props: Props) {
   return (
     <section id={props.id} className={styles.contactSection}>
       <div className={styles.contactFormContainer}>
-        <Parallax className={styles.parallaxContainer} speed={-10}>
-          <AboutMe className={styles.aboutMe} />
-          <ContactForm className={styles.contactForm} />
-        </Parallax>
+        <AboutMe />
+        <ContactForm />
       </div>
     </section>
   );

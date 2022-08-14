@@ -1,111 +1,52 @@
+.container {
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 5%;
+  flex: 1;
+  border: var(--main-border);
+}
+
 .formContainer {
-  display: grid;
-  column-gap: 5%;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto;
-  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   align-items: center;
   justify-content: center;
 }
 
-.nameContainer input {
-  width: 100%;
-}
-
-.emailContainer input {
-  width: 100%;
-}
-
-.subjectContainer {
-  grid-area: 2/1/3/3;
-}
-
-.subjectContainer input {
-  width: 100%;
-}
-
+.nameContainer,
+.emailContainer,
+.subjectContainer,
 .messageContainer {
-  grid-area: 3/1/4/3;
-  display: grid;
-}
-
-.messageContainer label {
-  margin-bottom: 1rem;
+  width: 100%;
+  border: var(--main-border);
+  padding: 1%;
+  box-shadow: var(--main-shadow);
 }
 
 .messageContainer textarea {
-  width: 100%;
-  min-height: 10rem;
-}
-
-.submitButton {
-  background-color: var(--secondary-color);
-  color: var(--text);
-  font-weight: bold;
-  border-radius: 5px;
-  border: 0;
-  padding: 1rem 0;
-  font-size: 1.5rem;
+  min-height: 100px;
 }
 
 .inputArea {
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  height: 3rem;
-  font-family: "Raleway";
-  font-size: 1.5rem;
-  resize: none;
-  padding: 3% 4%;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 1%;
+  font-size: 1.75rem;
 }
 
-.inputArea:focus {
-  outline: none;
-}
-
-.thanks {
+.buttonContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-@media (hover: hover) {
-  .submitButton {
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 768px) {
-  .nameContainer {
-    grid-area: 1/1/2/3;
-    display: flex;
-  }
-
-  .nameContainer input {
-    margin-left: 1rem;
-    width: 100%;
-  }
-
-  .emailContainer {
-    grid-area: 2/1/3/3;
-    display: flex;
-  }
-
-  .emailContainer input {
-    margin-left: 1rem;
-    width: 100%;
-  }
-
-  .subjectContainer {
-    grid-row: 3/4;
-  }
-
-  .messageContainer {
-    grid-row: 4/5;
-  }
-
-  .submitButton {
-    grid-row: 5/6;
-  }
+.submitButton {
+  width: 100%;
+  padding: 3%;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--secondary-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
 }

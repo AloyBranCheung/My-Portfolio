@@ -8,11 +8,11 @@
 /* *********************************** global variables *********************************** */
 :root {
   --main-color: #fcf8e8;
-  --main-shadow: 8px 10px 0 black;
+  --main-shadow: 6px 8px 0 black;
   --main-border: 2px solid black;
   --secondary-color: #94b49f; /*card background too */
-  --text: #05386b;
-  --gradient: linear-gradient(90deg, #a8ff78, #78ffd6);
+  --tertiary-color: #76549a;
+  --quarternary-color: #df7861;
 
   --animation-reveal: reveal;
   --animation-bounce: bounce;

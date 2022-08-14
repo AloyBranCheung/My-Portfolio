@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import LaunchIcon from "@mui/icons-material/Launch";
-import SecondaryCard from "../../../UI/SecondaryCard";
 
 type Props = {
   className: string;
@@ -21,16 +20,20 @@ type Props = {
 export default function FeaturedProject(props: Props) {
   return (
     <li className={`${styles.gridContainer} ${props.className}`}>
-      <Link href={props.redirectUrl} className={styles.imageWrapper}>
-        <a target="_blank" className={styles.imageWrapper}>
-          <Image
-            className={styles.image}
-            src={props.imgSrc}
-            alt="alt-picture"
-            priority={true}
-          />
-        </a>
-      </Link>
+      <div className={styles.container}>
+        <Link href={props.redirectUrl}>
+          <a target="_blank">
+            <div className={styles.imageWrapper}>
+              <Image
+                className={styles.image}
+                src={props.imgSrc}
+                alt="alt-picture"
+                priority={true}
+              />
+            </div>
+          </a>
+        </Link>
+      </div>
 
       <div className={styles.projectContent}>
         <div className={styles.title}>
@@ -38,11 +41,7 @@ export default function FeaturedProject(props: Props) {
           <h1>{props.titleProject}</h1>
         </div>
 
-        <div className={styles.projectDescription}>
-          <SecondaryCard className={styles.descriptionCard}>
-            {props.description}
-          </SecondaryCard>
-        </div>
+        <div className={styles.projectDescription}>{props.description}</div>
 
         <ul className={styles.techStack}>
           {props.techStack.map((el) => {
@@ -57,12 +56,12 @@ export default function FeaturedProject(props: Props) {
         <div className={styles.links}>
           <Link href={props.githubUrl}>
             <a target="_blank" className={styles.githubIcon}>
-              <GitHubIcon sx={{ fontSize: "3rem" }} />
+              <GitHubIcon sx={{ fontSize: "2.5rem" }} />
             </a>
           </Link>
           <Link href={props.deployUrl}>
             <a target="_blank" className={styles.launchIcon}>
-              <LaunchIcon sx={{ fontSize: "3rem" }} />
+              <LaunchIcon sx={{ fontSize: "2.5rem" }} />
             </a>
           </Link>
         </div>
