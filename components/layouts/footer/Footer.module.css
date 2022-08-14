@@ -1,7 +1,7 @@
 .footerSection {
   display: flex;
   height: 25vh;
-  padding: 5% 5% 20% 5%;
+  padding: 5% 5% 20%;
   justify-content: center;
   align-items: center;
   background-color: var(--quarternary-color);
@@ -21,7 +21,7 @@
 @media (min-width: 768px) {
   .footerSection {
     height: 15vh;
-    padding: 5% 5% 10% 5%;
+    padding: 5% 5% 10%;
   }
 }
 

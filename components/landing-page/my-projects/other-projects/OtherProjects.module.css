@@ -9,7 +9,7 @@
   .otherProjectsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5% 5% 10% 5%;
+    padding: 5% 5% 10%;
   }
 }
 
