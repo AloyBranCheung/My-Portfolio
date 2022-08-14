@@ -29,7 +29,7 @@ export default function LoginModal({
   };
 
   return (
-    <div>
+    <div className={styles.loginContainer}>
       <Dialog
         className={styles.modalContainer}
         open={isOpen}

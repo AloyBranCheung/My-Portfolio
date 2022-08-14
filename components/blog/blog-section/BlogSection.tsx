@@ -43,7 +43,9 @@ export default function BlogSection() {
     <section className={styles.blogSection}>
       <Card className={styles.blogsContainer}>
         <h5>Blogs</h5>
-        <Paginate blogs={blogs} />
+        <div className={styles.paginateContainer}>
+          <Paginate blogs={blogs} />
+        </div>
       </Card>
     </section>
   );

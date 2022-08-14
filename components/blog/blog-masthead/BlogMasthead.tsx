@@ -41,17 +41,17 @@ export default function BlogMasthead() {
   };
 
   return (
-    <section className={styles.blogMasthead}>
-      {!authCtx.isLoggedIn && (
-        <LoginModal
-          isOpen={isOpen}
-          handleClose={handleClose}
-          submitHandler={submitLoginHandler}
-        />
-      )}
+    <section className={styles.blogSection}>
+      <div className={styles.blogMasthead}>
+        {!authCtx.isLoggedIn && (
+          <LoginModal
+            isOpen={isOpen}
+            handleClose={handleClose}
+            submitHandler={submitLoginHandler}
+          />
+        )}
 
-      <div>
-        <Parallax speed={-10}>
+        <div className={styles.blogText}>
           <h1>My Personal Blog</h1>
           <p>a little something for me to share whatever I want</p>
           <div className={styles.buttonContainer}>
@@ -76,7 +76,7 @@ export default function BlogMasthead() {
               />
             )}
           </div>
-        </Parallax>
+        </div>
       </div>
     </section>
   );
