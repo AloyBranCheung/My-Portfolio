@@ -1,120 +1,63 @@
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
   list-style: none;
-  max-width: 1450px;
 }
 
-/* ***** Image Column ***** */
-.imageWrapper {
-  grid-column: 1/13;
-  grid-row: 1/-1;
-  position: relative;
+.container {
+  box-sizing: content-box;
+  border: var(--main-border);
+  background: var(--tertiary-color);
+  padding: 5%;
   display: flex;
-  border-radius: 50px 25px;
+  align-items: center;
+  justify-content: center;
 }
 
-.image {
-  border-radius: 50px 25px;
-  object-fit: scale-down;
-  filter: grayscale(100%) contrast(1) brightness(90%);
+.imageWrapper {
+  box-shadow: var(--main-shadow);
+  border: var(--main-border);
 }
 
-.image:active {
+.imageWrapper:active {
   transform: scale(0.9);
 }
 
-@media (hover: hover) {
-  .image:hover {
-    filter: none;
-    transition: all 0.3s ease-out;
-  }
-}
-
-/* ****** Project Content Column ***** */
 .projectContent {
-  grid-column: 11/-1;
-  grid-row: 1/-1;
-  row-gap: 5%;
-  z-index: 1;
+  padding: 5%;
+  border: var(--main-border);
+  background: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: right;
+  gap: 10px;
+  max-width: 768px;
 }
 
 .techStack {
   list-style: none;
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: flex-end;
-}
-
-.techs {
-  margin-left: 5%;
-  font-weight: bold;
 }
 
 .links {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 4%;
+  gap: 10px;
 }
 
-.githubIcon {
-  margin-right: 50%;
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-column: 1fr 1fr;
+  }
+
+  .container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 
-.githubIcon:active {
-  transform: scale(0.9);
-}
-
-.launchIcon:active {
-  transform: scale(0.9);
-}
-
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .projectContent {
-    grid-column: 9/-1;
-  }
-}
-
-@media (max-width: 768px) {
-  .imageWrapper {
-    grid-column: 1/-1;
-  }
-
-  .image {
-    object-fit: cover;
-    filter: blur(2px) brightness(90%);
-  }
-
-  .projectContent {
-    grid-column: 1/-1;
-    padding: 10%;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .title {
-    margin-bottom: 10%;
-    padding-left: 5%;
-  }
-
-  .projectDescription {
-    margin-bottom: 10%;
-  }
-
-  .techStack {
-    margin-bottom: 10%;
-    justify-content: flex-start;
-    padding: 0;
-  }
-
-  .links {
-    justify-content: flex-start;
-    padding-left: 4%;
+    font-size: 2rem;
+    justify-content: center;
   }
 }

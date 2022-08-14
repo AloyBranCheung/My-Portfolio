@@ -71,7 +71,7 @@ export default function PaginatedItems({ blogs }: Props) {
 
   return (
     <>
-      <div>{blogMap}</div>
+      <div className={styles.blogs}>{blogMap}</div>
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"

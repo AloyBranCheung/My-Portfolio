@@ -73,19 +73,21 @@ export default function FullBlog() {
 
   return (
     <div id={currBlog._id} className={styles.blogContainer}>
-      <NormalButton text="Back" onClick={backClickHandler} />
       <div className={styles.blogContent}>
-        <Image
-          src={currBlog.imgUrl}
-          alt="cover-photo"
-          layout="responsive"
-          height="1080px"
-          width="1920px"
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            src={currBlog.imgUrl}
+            alt="cover-photo"
+            layout="responsive"
+            height="1080px"
+            width="1920px"
+          />
+        </div>
         <h1 className={styles.blogTitle}>{currBlog.title}</h1>
         <p className={styles.timeStamp}>{currBlog.date}</p>
         <QuillReader readContents={currBlog.delta} />
       </div>
+      <NormalButton text="Back" onClick={backClickHandler} />
     </div>
   );
 }

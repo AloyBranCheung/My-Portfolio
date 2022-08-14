@@ -7,31 +7,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  padding: 5%;
 }
-.blogMasthead p {
-  margin-top: 4%;
-  font-size: 2rem;
+
+.blogText {
+  padding: 7% 5%;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--main-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
+  max-width: 768px;
 }
 
 .buttonContainer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 5%;
 }
 
 .loginButton {
-  margin-top: 10%;
-}
-
-@media (max-width: 1200px) {
-  .blogMasthead {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(168, 255, 120, 0.8),
-        rgba(120, 255, 214, 0.5)
-      ),
-      url("../../../public/assets/images/blogMastHead.jpg");
-
-    transition: all 0.3s ease-out;
-  }
+  background-color: var(--secondary-color);
 }

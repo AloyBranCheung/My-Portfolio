@@ -2,8 +2,10 @@
   position: fixed;
   bottom: 5rem;
   right: 4rem;
-  transform: rotate(180deg) scale(2.5);
-  color: white;
+  transform: scale(2.5);
+  background-color: white;
+  box-shadow: 2px 2px black;
+  border: var(--main-border);
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.1s ease-out;
@@ -14,8 +16,10 @@
   position: fixed;
   bottom: 5rem;
   right: 4rem;
-  transform: rotate(180deg) scale(2.5);
-  color: white;
+  transform: scale(2.5);
+  background-color: white;
+  box-shadow: 2px 2px black;
+  border: var(--main-border);
   cursor: pointer;
   z-index: 100;
   opacity: 0;

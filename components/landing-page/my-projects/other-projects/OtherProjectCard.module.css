@@ -1,7 +1,10 @@
-.title {
-  margin: 2rem 0;
-}
-
-.techStack {
-  margin-bottom: 10%;
+.card {
+  border: var(--main-border);
+  padding: 5%;
+  background-color: white;
+  box-shadow: var(--main-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 330px;
 }

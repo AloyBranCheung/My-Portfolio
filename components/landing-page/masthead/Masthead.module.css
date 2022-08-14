@@ -1,37 +1,40 @@
 .mastContainer {
-  height: 100vh;
   display: flex;
-  justify-content: center;
+  min-height: 25vh;
   flex-direction: column;
-  padding: 0 20rem;
+  align-items: center;
+  justify-content: space-around;
   background-color: var(--secondary-color);
   margin: 6% 5%;
-  border-radius: 10px 15px;
-  /* background-image: url("../../../public/assets/images/hrvoje_photography-4TVbbaNAw9Q-unsplash.jpg");
-  background-size: cover; */
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
   overflow: hidden;
+  padding: 5%;
+}
+
+.introContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.introContainer h1 {
+  padding: 5%;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .buttonContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 5rem;
   width: 100%;
-}
-
-.textEffect {
-  animation: var(--animation-reveal) 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .mainButton {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 1.5rem;
-  margin-left: 3rem;
-  margin-right: 1rem;
   transform: scale(0.9);
-  font-family: "ComicCat";
   transition: all 0.03s ease-in;
   animation: var(--animation-reveal) 0.5s ease-out;
 }
@@ -54,26 +57,20 @@
   }
 }
 
-@media (max-width: 769px) {
-  .mainButton {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
+@media (min-width: 600px) {
+  .buttonContainer {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 769px) {
+@media (min-width: 768px) {
   .mastContainer {
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+    max-width: 768px;
   }
-  .buttonContainer {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
+}
+
+@media (min-width: 1200px) {
+  .mastContainer {
+    gap: 50px;
   }
 }

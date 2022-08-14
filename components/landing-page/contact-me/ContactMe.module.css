@@ -1,134 +1,15 @@
 .contactSection {
-  display: flex;
-  position: relative;
-  background-color: var(--secondary-color);
-  align-items: center;
-  justify-content: center;
-  padding: 5% 10%;
-  font-weight: bold;
-  border-radius: 10px 15px;
-}
-
-.contactSection h1 {
-  margin-bottom: 3rem;
-}
-
-.aboutMe {
   padding: 5%;
-  animation: translateDown 0.5s ease-out forwards 0.8s;
-  transform-origin: top center;
-  opacity: 0;
-}
-
-@keyframes translateDown {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-
-  80% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.contactForm {
-  padding: 5%;
-  opacity: 0;
-  animation: translateUp 0.5s ease-out forwards 0.8s;
-  transform-origin: top center;
-}
-
-@keyframes translateUp {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .contactFormContainer {
-  background: var(--gradient);
-  border-radius: 15px 20px;
-  padding: 10% 20%;
-  display: grid;
-  grid-template-columns: 1fr;
-  overflow: hidden;
-  animation: revealContainer 0.5s ease-out forwards;
-  transform-origin: center;
+  background-color: var(--secondary-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
 }
 
-@keyframes revealContainer {
-  0% {
-    opacity: 0;
-    width: 0%;
-  }
-
-  80% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-.parallaxContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media (max-width: 1000px) {
+@media (min-width: 768px) {
   .contactFormContainer {
-    padding: 20% 5%;
-  }
-}
-
-@media (max-width: 768px) {
-  .parallaxContainer {
-    grid-template-columns: 1fr;
-  }
-
-  @keyframes translateUp {
-    0% {
-      transform: translateX(100px);
-      opacity: 0;
-    }
-    80% {
-      transform: translateX(-10px);
-    }
-
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes translateDown {
-    0% {
-      transform: translateX(-100px);
-      opacity: 0;
-    }
-
-    80% {
-      transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+    display: flex;
   }
 }

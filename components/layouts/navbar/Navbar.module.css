@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--gradient);
-  padding: 1% 12%;
+  background: var(--main-color);
+  padding: 20px 30px;
   position: fixed;
   width: 100%;
   top: 0;
   transition: all 0.1s ease-out;
   z-index: 100;
-  font-family: "ComicCat";
+  border-bottom: var(--main-border);
 }
 
 .navbarScrolling {
@@ -19,37 +19,42 @@
 
 .brandTitle {
   justify-self: center;
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   opacity: 0;
+  background-color: var(--secondary-color);
+  padding: 2% 5%;
+  box-shadow: var(--main-shadow);
+  border: var(--main-border);
   animation: var(--animation-bounce) 1s ease-out forwards,
     var(--animation-reveal) 1s ease-out forwards;
 }
 
 .navIcon {
-  right: 4rem;
-  top: 3.75rem;
-  display: none;
+  display: flex;
+  transform: scale(2);
+  top: 2.5rem;
+  background-color: white;
+  border: var(--main-border);
+  box-shadow: 1.5px 2px black;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) {
   .navbar {
-    padding: 2% 12%;
-  }
-
-  .navIcon {
-    display: flex;
-    transform: scale(2);
-    top: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 2.5rem 4rem;
+    padding: 25px 50px;
   }
 
   .brandTitle {
-    font-size: 2rem;
+    padding: 1% 3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 25px 90px;
+  }
+
+  .navIcon {
+    display: none;
   }
 }

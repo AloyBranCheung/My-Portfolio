@@ -1,6 +1,18 @@
 .blogContainer {
-  padding: 7% 12%;
+  padding: 10% 12%;
   background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.blogContainer h1,
+.timeStamp {
+  font-size: 3rem;
+}
+
+.blogContainer p {
+  font-size: 2.5rem;
 }
 
 .backButton {
@@ -19,6 +31,14 @@
   display: flex;
   flex-direction: column;
   margin-top: 3%;
+  gap: 10px;
+  min-height: 60vh;
+}
+
+.imageContainer {
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
+  margin-bottom: 5%;
 }
 
 .paragraph {
@@ -34,7 +54,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: var(--gradient);
+  background-color: var(--main-color);
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -51,5 +71,15 @@
 @media (max-width: 400px) {
   .blogContainer {
     padding-top: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blogContainer {
+    margin-top: 2%;
+  }
+
+  .imageContainer {
+    margin-bottom: 0%;
   }
 }

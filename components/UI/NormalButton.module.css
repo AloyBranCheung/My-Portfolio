@@ -1,17 +1,9 @@
 .normalButton {
-  background: var(--gradient);
-  color: var(--text);
-  border-radius: 5px;
-  border: 0;
-  padding: 2%;
-  font-size: 1.5rem;
+  background-color: var(--main-color);
+  padding: 2% 5%;
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
-  cursor: pointer;
-}
-
-@media (hover: hover) {
-  .normalButton:hover {
-    background-color: var(--main-color);
-    transition: all 0.1s ease-out;
-  }
+  font-size: 1.5rem;
 }

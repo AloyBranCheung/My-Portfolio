@@ -1,7 +1,11 @@
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  padding: 2.5% 5%;
+  padding: 6%;
+  margin: 2% 0;
+  background-color: var(--main-color);
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
 }
 
 .title {
@@ -34,6 +38,9 @@
   grid-area: 1/7/4/-1;
   position: relative;
   display: flex;
+  border: var(--main-border);
+  box-shadow: var(--main-shadow);
+  margin-bottom: 5%;
 }
 
 .image {

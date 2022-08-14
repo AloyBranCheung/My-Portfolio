@@ -14,15 +14,14 @@ type Props = {
 };
 export default function OtherProjectCard(props: Props) {
   return (
-    <SecondaryCard className={`${props.cardStyle} ${styles.card}`}>
+    <div className={`${props.cardStyle} ${styles.card}`}>
       <IconLink githubUrl={props.githubUrl} deployUrl={props.deployUrl} />
       <h1 className={styles.title}>{props.title}</h1>
       <OtherProjectDescription
         text={props.description}
         className={`${props.descriptionStyle} ${styles.description}`}
       />
-      <br></br>
       <p className={styles.techStack}>{props.techStack}</p>
-    </SecondaryCard>
+    </div>
   );
 }

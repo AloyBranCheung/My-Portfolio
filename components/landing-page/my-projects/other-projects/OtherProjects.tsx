@@ -40,6 +40,24 @@ export default function OtherProjects() {
         deployUrl="https://aquamarine-capybara-5f358f.netlify.app/"
         techStack="Techs: React.js, Styled-components, Firebase"
       ></OtherProjectCard>
+      <OtherProjectCard
+        title="Simon Game"
+        cardStyle={`${styles.card1}`}
+        description="Remember Hasbro's Simon game? Now online."
+        descriptionStyle={styles.description}
+        githubUrl="https://github.com/AloyBranCheung/Simon-Game-"
+        deployUrl="https://aloybrancheung.github.io/Simon-Game-/"
+        techStack="Techs: HTML, CSS, Javascript"
+      ></OtherProjectCard>
+      <OtherProjectCard
+        title=""
+        cardStyle={`${styles.card1}`}
+        description="Coming soon..."
+        descriptionStyle={styles.description}
+        githubUrl=""
+        deployUrl=""
+        techStack=""
+      ></OtherProjectCard>
     </li>
   );
 }
