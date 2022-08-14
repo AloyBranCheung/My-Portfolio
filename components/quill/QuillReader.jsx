@@ -14,7 +14,13 @@ export default function QuillReader({ readContents }) {
         readOnly={true}
         value={quillValue}
         modules={{ toolbar: false }}
-        style={{ padding: "5% 0", lineHeight: "3rem" }}
+        style={{
+          backgroundColor: "var(--main-color)",
+          fontSize: "2rem",
+          padding: "5%",
+          boxShadow: "var(--main-shadow)",
+          border: "var(--main-border)",
+        }}
       />
     </div>
   );

@@ -47,10 +47,6 @@
   object-fit: cover;
 }
 
-.imageContainer:active {
-  margin: 1%;
-}
-
 @media (hover: hover) {
   .imageContainer:hover {
     filter: grayscale(100%);

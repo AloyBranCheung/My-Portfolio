@@ -14,7 +14,7 @@ export default function CreateBlog() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [imgUrl, setImgUrl] = useState(
-    `https://picsum.photos/200/300?random=${uuidv4()}`
+    `https://picsum.photos/1920/1080?random=${uuidv4()}`
   );
   const [date, setDate] = useState("");
   const dateRef = useRef();
