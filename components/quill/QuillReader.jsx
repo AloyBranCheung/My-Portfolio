@@ -17,7 +17,7 @@ export default function QuillReader({ readContents }) {
         style={{
           backgroundColor: "var(--main-color)",
           fontSize: "2rem",
-          padding: "5%",
+          padding: "10%",
           boxShadow: "var(--main-shadow)",
           border: "var(--main-border)",
         }}
