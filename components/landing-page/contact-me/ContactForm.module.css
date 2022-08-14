@@ -4,6 +4,7 @@
   padding: 5%;
   flex: 1;
   border: var(--main-border);
+  position: relative;
 }
 
 .formContainer {
@@ -12,6 +13,12 @@
   gap: 15px;
   align-items: center;
   justify-content: center;
+}
+
+.thanks {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30% 0;
 }
 
 .nameContainer,
