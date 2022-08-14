@@ -35,7 +35,7 @@ export default function PaginatedItems({ blogs }: Props) {
   useEffect(() => {
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(blogs.slice(itemOffset, endOffset));
+    setCurrentItems(blogs.reverse().slice(itemOffset, endOffset));
     setPageCount(Math.ceil(blogs.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, blogs]);
 
