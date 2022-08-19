@@ -6,11 +6,11 @@ export default function AboutMe() {
     <div className={styles.container}>
       <h1>About Me</h1>
       <p>
-        Born in Toronto, raised in Hong Kong. I believe that to succeed in this
-        industry, one must always be learning and adapting quickly. In my spare
-        time, I like to lift heavy objects and put them down repetitively in a
-        small room with people of similar interests. Oh, I also rollerblade and
-        play games. Currently, I am learning to digitally draw.
+        Born in Toronto, raised in Hong Kong. I believe one must always be
+        learning and adapting quickly. In my spare time, I like to lift heavy
+        objects and put them down repetitively in a small room with people of
+        similar interests. Oh, I also rollerblade and play games. Currently, I
+        am learning to digitally draw.
       </p>
       <p>
         A fun fact about me is that in 2018 I paddled in the Club Crews World
