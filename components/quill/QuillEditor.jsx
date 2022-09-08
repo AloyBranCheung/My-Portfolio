@@ -30,7 +30,7 @@ export default function QuillEditor({ editorContentsDelta }) {
 
   const handleChange = (content, delta, source, editor) => {
     setQuillValue(editor.getContents());
-    editorContentsDelta(editor.getContents());
+    editorContentsDelta(content);
   };
 
   return (
