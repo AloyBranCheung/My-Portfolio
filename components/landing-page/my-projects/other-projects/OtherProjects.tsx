@@ -14,6 +14,15 @@ export default function OtherProjects() {
         techStack="Techs: React, MongoDB, SocketIO, Quill"
       ></OtherProjectCard>
       <OtherProjectCard
+        title="COVID-19 API"
+        cardStyle={`${styles.card1}`}
+        description="This is a Covid-19 tracker app using the API provided by COVID19 API with data for this API sourced by Johns Hopkins CSSE. Data is visualized using Chart.js."
+        descriptionStyle={styles.description}
+        githubUrl="https://github.com/AloyBranCheung/Covid19-Tracker-App"
+        deployUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
+        techStack="Techs: React, MaterialUI, Chart.js"
+      ></OtherProjectCard>
+      <OtherProjectCard
         title="GOAT Quotes"
         cardStyle={`${styles.card1}`}
         description="A full-stack website that displays quotes generated from APIs like Kanye REST."
@@ -21,6 +30,15 @@ export default function OtherProjects() {
         githubUrl="https://github.com/AloyBranCheung/QuotesWebsite"
         deployUrl="https://gentle-brushlands-11763.herokuapp.com/"
         techStack="Techs: HTML/CSS/JS, jQuery, Bootstrap5, Node/Express.js"
+      ></OtherProjectCard>
+      <OtherProjectCard
+        title="Simon Game"
+        cardStyle={`${styles.card1}`}
+        description="Remember Hasbro's Simon game? Now online."
+        descriptionStyle={styles.description}
+        githubUrl="https://github.com/AloyBranCheung/Simon-Game-"
+        deployUrl="https://aloybrancheung.github.io/Simon-Game-/"
+        techStack="Techs: HTML, CSS, Javascript"
       ></OtherProjectCard>
       <OtherProjectCard
         title="Typescript To-do List"
@@ -39,24 +57,6 @@ export default function OtherProjects() {
         githubUrl="https://github.com/AloyBranCheung/ReactMeals"
         deployUrl="https://aquamarine-capybara-5f358f.netlify.app/"
         techStack="Techs: React.js, Styled-components, Firebase"
-      ></OtherProjectCard>
-      <OtherProjectCard
-        title="Simon Game"
-        cardStyle={`${styles.card1}`}
-        description="Remember Hasbro's Simon game? Now online."
-        descriptionStyle={styles.description}
-        githubUrl="https://github.com/AloyBranCheung/Simon-Game-"
-        deployUrl="https://aloybrancheung.github.io/Simon-Game-/"
-        techStack="Techs: HTML, CSS, Javascript"
-      ></OtherProjectCard>
-      <OtherProjectCard
-        title=""
-        cardStyle={`${styles.card1}`}
-        description="Coming soon..."
-        descriptionStyle={styles.description}
-        githubUrl=""
-        deployUrl=""
-        techStack=""
       ></OtherProjectCard>
     </li>
   );

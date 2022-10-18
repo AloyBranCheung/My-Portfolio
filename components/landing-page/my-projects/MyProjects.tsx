@@ -1,7 +1,7 @@
 import styles from "./MyProjects.module.css";
 import FeaturedProject from "./featured-project/FeaturedProject";
 import OtherProjects from "./other-projects/OtherProjects";
-import covidTrackerSample from "../../../public/assets/images/covid19-tracker.gif";
+import simpleOrange from "../../../public/assets/images/sample1.gif";
 import AltFeaturedProject from "./featured-project/AltFeaturedProject";
 import BookingSample from "../../../public/assets/images/BookingSample.gif";
 import chatDemo from "../../../public/assets/images/chat demo.gif";
@@ -12,11 +12,11 @@ type Props = {
 
 export default function MyProjects(props: Props) {
   const chatdemo = ["React.js", "MongoDB", "SocketIO", "Node/Express.js"];
-  const covTrackFeaturedProjects = [
-    "React.js",
-    "API",
+  const simpleOrangeTech = [
+    "React/Typescript",
     "Material UI",
-    "Chart.js",
+    "Highchart",
+    "MongoDB/Node/Express",
   ];
   const bookingApp = ["React.js", "Node.js", "Express.js", "MongoDB"];
 
@@ -27,6 +27,17 @@ export default function MyProjects(props: Props) {
       <ul className={styles.listOfProjectsContainer}>
         <AltFeaturedProject
           className={styles.project}
+          imgSrc={simpleOrange}
+          heading="Featured Project"
+          titleProject="Simply Orange"
+          description="Why? Because I can. Because every time I shop at Loblaws the prices change from as low as $3.99 to as high at $8.99. Conspiracy? I think not. Time to track the prices I buy my OJ at and graph them up. Because I'm here to save the world."
+          techStack={simpleOrangeTech}
+          redirectUrl="https://resonant-jelly-b98e11.netlify.app/"
+          githubUrl="https://github.com/AloyBranCheung/simply-orange"
+          deployUrl="https://resonant-jelly-b98e11.netlify.app/"
+        />
+        <FeaturedProject
+          className={styles.project}
           imgSrc={chatDemo}
           heading="Featured Project"
           titleProject="Neobrutalistic Chat App"
@@ -36,7 +47,7 @@ export default function MyProjects(props: Props) {
           githubUrl="https://github.com/AloyBranCheung/neobrutalistic-chat-app"
           deployUrl="https://silly-narwhal-3281d0.netlify.app/"
         />
-        <FeaturedProject
+        <AltFeaturedProject
           className={styles.project}
           imgSrc={BookingSample}
           heading="Featured Project"
@@ -48,17 +59,6 @@ export default function MyProjects(props: Props) {
           deployUrl="https://github.com/AloyBranCheung/booking-clone-app"
         />
 
-        <AltFeaturedProject
-          className={styles.project}
-          imgSrc={covidTrackerSample}
-          heading="Featured Project"
-          titleProject="COVID-19 Tracker App"
-          description="This is a Covid-19 tracker app using the API provided by COVID19 API with data for this API sourced by Johns Hopkins CSSE. Data is visualized using Chart.js."
-          techStack={covTrackFeaturedProjects}
-          redirectUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
-          githubUrl="https://github.com/AloyBranCheung/Covid19-Tracker-App"
-          deployUrl="https://eclectic-speculoos-2d9b2b.netlify.app/"
-        />
         <div className={styles.otherProjectsContainer}>
           <OtherProjects />
         </div>
