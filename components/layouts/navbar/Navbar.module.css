@@ -4,12 +4,13 @@
   align-items: center;
   background: var(--main-color);
   padding: 20px 30px;
-  position: fixed;
   width: 100%;
+  border-bottom: var(--main-border);
+
+  /* position: fixed;
   top: 0;
   transition: all 0.1s ease-out;
-  z-index: 100;
-  border-bottom: var(--main-border);
+  z-index: 100; */
 }
 
 .navbarScrolling {
@@ -19,15 +20,7 @@
 
 .brandTitle {
   justify-self: center;
-  font-size: 2rem;
-  cursor: pointer;
-  opacity: 0;
-  background-color: var(--secondary-color);
-  padding: 2% 5%;
-  box-shadow: var(--main-shadow);
-  border: var(--main-border);
-  animation: var(--animation-bounce) 1s ease-out forwards,
-    var(--animation-reveal) 1s ease-out forwards;
+  font-size: 3rem;
 }
 
 .navIcon {
@@ -45,7 +38,7 @@
   }
 
   .brandTitle {
-    padding: 1% 3%;
+    font-size: 4rem;
   }
 }
 
@@ -56,5 +49,11 @@
 
   .navIcon {
     display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .brandTitle {
+    font-size: 5rem;
   }
 }

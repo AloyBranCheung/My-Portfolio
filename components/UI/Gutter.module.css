@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gutter {
+  max-width: 1440px;
+  width: 100%;
+}
