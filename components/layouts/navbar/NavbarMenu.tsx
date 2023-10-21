@@ -20,11 +20,11 @@ export default function NavbarMenu({ menuState, onMenuClick }: Props) {
             <a onClick={onMenuClick}>Contact Me</a>
           </Link>
         </li>
-        <li className={styles.bounceEffect2}>
+        {/* <li className={styles.bounceEffect2}>
           <Link href="/blog">
             <a onClick={onMenuClick}>Blog</a>
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

@@ -1,5 +1,11 @@
 # My Portfolio Website
-Made with 
+
+## To run dev:
+
+1. `npm install`
+2. `npm run dev`
+
+## Made with
 
 <div>
   <img width="45px" src="https://raw.githubusercontent.com/devicons/devicon/c5378d6c2510ffa0b3e4475af95618a8048d6cf1/icons/html5/html5-original.svg">
