@@ -20,10 +20,10 @@ export default function Navbar() {
   };
 
   // Brand Title navigate home
-  const brandTitleClick = () => {
-    menuClickHandler();
-    router.push("/");
-  };
+  // const brandTitleClick = () => {
+  //   menuClickHandler();
+  //   router.push("/");
+  // };
 
   // ***************************************************************************
   return (

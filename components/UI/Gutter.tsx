@@ -8,7 +8,7 @@ interface GutterProps {
 export default function Gutter({ children }: GutterProps) {
   return (
     <div className={styles.container}>
-      <div className={styles.gutter}>{children}</div>;
+      <div className={styles.gutter}>{children}</div>
     </div>
   );
 }
