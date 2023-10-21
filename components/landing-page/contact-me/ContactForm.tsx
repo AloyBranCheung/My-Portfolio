@@ -1,16 +1,32 @@
 import styles from "./ContactForm.module.css";
-import { useForm, ValidationError } from "@formspree/react";
-import { useRef } from "react";
+// zod
+import { z } from "zod";
+// formspree
+import { useForm as useFormspree, ValidationError } from "@formspree/react";
+// mui
+import { ButtonBase } from "@mui/material";
+import RestartAltIcon from "@mui/icons-material/RestartAlt";
+// react-hook-form
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+// validator
+import contactFormValidationSchema from "../../../validators/contact-form-validator";
 
 export default function ContactForm() {
-  const nameRef = useRef<any>("");
-  const subjectRef = useRef<any>("");
-  const data: any = {
-    name: nameRef.current!.value,
-    subject: subjectRef.current!.value,
-  };
-
-  const [state, handleSubmit] = useForm("mqkjzzyg", data);
+  const {
+    register,
+    handleSubmit: handleSubmitForm,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(contactFormValidationSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+  const [state, handleSubmit] = useFormspree("mqkjzzyg");
 
   return (
     <div className={styles.container}>
@@ -21,69 +37,43 @@ export default function ContactForm() {
       )}
       {!state.succeeded && (
         <div className={styles.formWrapper}>
-          <form onSubmit={handleSubmit} className={styles.formContainer}>
+          <form
+            onSubmit={handleSubmitForm(handleSubmit)}
+            className={styles.formContainer}
+          >
             <div className={styles.nameContainer}>
               <label htmlFor="name">Name</label>
-              <input
-                className={styles.inputArea}
-                id="name"
-                type="text"
-                name="name"
-                required
-              />
-              <ValidationError
-                prefix="Your name"
-                field="name"
-                errors={state.errors}
-              />
+              <input className={styles.inputArea} {...register("name")} />
+              {errors.name && (
+                <p className={styles.errorMsg}>{errors.name.message}</p>
+              )}
             </div>
 
             <div className={styles.emailContainer}>
               <label htmlFor="email">Email</label>
-              <input
-                className={styles.inputArea}
-                id="email"
-                name="email"
-                type="email"
-                required
-              />
-              <ValidationError
-                prefix="Your email"
-                field="email"
-                errors={state.errors}
-              />
+              <input className={styles.inputArea} {...register("email")} />
+              {errors.email && (
+                <p className={styles.errorMsg}>{errors.email.message}</p>
+              )}
             </div>
 
             <div className={styles.subjectContainer}>
               <label htmlFor="subject">Subject </label>
-              <input
-                className={styles.inputArea}
-                id="subject"
-                name="subject"
-                type="text"
-              />
+              <input className={styles.inputArea} {...register("subject")} />
+              {errors.subject && (
+                <p className={styles.errorMsg}>{errors.subject.message}</p>
+              )}
             </div>
 
             <div className={styles.messageContainer}>
               <label htmlFor="message">Message</label>
-              <textarea
-                className={styles.inputArea}
-                id="message"
-                name="message"
-                required
-              />
-              <ValidationError
-                prefix="Your message"
-                field="message"
-                errors={state.errors}
-              />
+              <textarea className={styles.inputArea} {...register("message")} />
+              {errors.message && (
+                <p className={styles.errorMsg}>{errors.message.message}</p>
+              )}
             </div>
             <div className={styles.buttonContainer}>
-              <button
-                type="submit"
-                className={styles.submitButton}
-                disabled={state.submitting}
-              >
+              <button type="submit" className={styles.submitButton}>
                 Submit
               </button>
             </div>

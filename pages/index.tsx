@@ -4,6 +4,7 @@ import Masthead from "../components/landing-page/masthead/Masthead";
 import MyProjects from "../components/landing-page/my-projects/MyProjects";
 import { motion } from "framer-motion";
 import styles from "./index.module.css";
+import Gutter from "../components/UI/Gutter";
 
 export default function HomePage() {
   return (
@@ -13,14 +14,16 @@ export default function HomePage() {
       exit={{ opacity: 0, transition: { duration: 50 } }}
       style={{ display: "flex", width: "100%" }}
     >
-      <Head>
-        <title>Brandon Cheung</title>
-      </Head>
-      <section className={styles.section}>
-        <Masthead />
-        <MyProjects id="projects" />
-        <ContactMe id="contactMe" />
-      </section>
+      <Gutter>
+        <Head>
+          <title>Brandon Cheung</title>
+        </Head>
+        <section className={styles.section}>
+          {/* <Masthead /> */}
+          <MyProjects id="projects" />
+          <ContactMe id="contactMe" />
+        </section>
+      </Gutter>
     </motion.section>
   );
 }

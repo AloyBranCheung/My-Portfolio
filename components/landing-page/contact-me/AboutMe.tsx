@@ -6,11 +6,16 @@ export default function AboutMe() {
     <div className={styles.container}>
       <h1>About Me</h1>
       <p>
-        Born in Toronto, raised in Hong Kong. I believe one must always be
-        learning and adapting quickly. In my spare time, I like to lift heavy
-        objects and put them down repetitively in a small room with people of
-        similar interests. Oh, I also rollerblade and play games. Currently, I
-        am learning to digitally draw.
+        Hi, I&apos;m Brandon! I&apos;m a passionate web developer interested in
+        learning new technologies and building amazing digital experiences.
+        Currently, I&apos;m working on a Three.js portfolio v2 and Three.js
+        game.
+      </p>
+      <p>
+        I have experience in React/Next.js, Strapi, MUI Components, Auth0, as
+        well as some experience in the backend with Python/FastAPI,
+        Postgres/SQL, AWS/Terraform. You can find my professional experience if
+        you click my resume below :).
       </p>
       <p>
         A fun fact about me is that in 2018 I paddled in the Club Crews World

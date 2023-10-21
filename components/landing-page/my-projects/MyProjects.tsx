@@ -1,10 +1,12 @@
 import styles from "./MyProjects.module.css";
+// components
 import FeaturedProject from "./featured-project/FeaturedProject";
 import OtherProjects from "./other-projects/OtherProjects";
-import simpleOrange from "../../../public/assets/images/sample1.gif";
 import AltFeaturedProject from "./featured-project/AltFeaturedProject";
-import BookingSample from "../../../public/assets/images/BookingSample.gif";
+// images
 import chatDemo from "../../../public/assets/images/chat demo.gif";
+import simplyBudgets from "../../../public/assets/images/simply-budgets.gif";
+import boardgameStatsGif from "../../../public/assets/images/boardgame-stats.gif";
 
 type Props = {
   id: string;
@@ -12,13 +14,13 @@ type Props = {
 
 export default function MyProjects(props: Props) {
   const chatdemo = ["React.js", "MongoDB", "SocketIO", "Node/Express.js"];
-  const simpleOrangeTech = [
+  const simplyBudgetsTech = [
     "React/Typescript",
     "Material UI",
-    "Highchart",
-    "MongoDB/Node/Express",
+    "MongoDB/Mongoose",
+    "Node/Express",
   ];
-  const bookingApp = ["React.js", "Node.js", "Express.js", "MongoDB"];
+  const boardgameStats = ["Next.js", "SocketIO", "Firebase", "TailwindCSS/MUI"];
 
   return (
     <section id={props.id} className={styles.projectsSection}>
@@ -27,36 +29,33 @@ export default function MyProjects(props: Props) {
       <ul className={styles.listOfProjectsContainer}>
         <AltFeaturedProject
           className={styles.project}
-          imgSrc={simpleOrange}
+          imgSrc={simplyBudgets}
           heading="Featured Project"
-          titleProject="Simply Orange"
-          description="Why? Because I can. Because every time I shop at Loblaws the prices change from as low as $3.99 to as high at $8.99. Conspiracy? I think not. Time to track the prices I buy my OJ at and graph them up. Because I'm here to save the world."
-          techStack={simpleOrangeTech}
-          redirectUrl="https://resonant-jelly-b98e11.netlify.app/"
-          githubUrl="https://github.com/AloyBranCheung/simply-orange"
-          deployUrl="https://resonant-jelly-b98e11.netlify.app/"
+          titleProject="SimplyBudgets"
+          description="A simple budgeting app based on the 50/30/20 rule. You can add/remove and debit/credit expenses. In addition, a history of expenses is kept for future development purposes (e.g. graphing with Highcharts). Please note first load may take a wild as I am hosting on a free service."
+          techStack={simplyBudgetsTech}
+          githubUrl="https://github.com/AloyBranCheung/budget-calculator"
+          deployUrl="https://precious-torte-3bafcb.netlify.app/"
         />
         <FeaturedProject
+          className={styles.project}
+          imgSrc={boardgameStatsGif}
+          heading="Featured Project"
+          titleProject="Boardgame Dashboard"
+          description="I like to play board games with my partner and we're competitive. So we created a stack tracker that also includes an app for a board game we love to play that uses Socket.io so we can chat with each other and track each other's score live. Please note first load may take a wild as I am hosting on a free service."
+          techStack={boardgameStats}
+          githubUrl="https://github.com/AloyBranCheung/board-game-stats"
+          deployUrl="https://board-game-stats.onrender.com/"
+        />
+        <AltFeaturedProject
           className={styles.project}
           imgSrc={chatDemo}
           heading="Featured Project"
           titleProject="Neobrutalistic Chat App"
           description="To learn more about neobrutalism web design, I made a fullstack chat app based around neobrutalistic design. Through SocketIO, users can join a room and live chat with other users. I loved using Tailwind CSS here."
           techStack={chatdemo}
-          redirectUrl="https://silly-narwhal-3281d0.netlify.app/"
           githubUrl="https://github.com/AloyBranCheung/neobrutalistic-chat-app"
           deployUrl="https://silly-narwhal-3281d0.netlify.app/"
-        />
-        <AltFeaturedProject
-          className={styles.project}
-          imgSrc={BookingSample}
-          heading="Featured Project"
-          titleProject="Booking Clone App"
-          description="Booking Clone App is a clone of booking.com. This app has user authentication using JWT, a search bar function, and a booking function that checks if the dates for a specific room/location are booked. An admin panel is also included for content management. The frontend uses React and Material UI while the admin panel uses React and Sass. The backend uses Node/Express.js and MongoDB to manage the data."
-          techStack={bookingApp}
-          redirectUrl="https://github.com/AloyBranCheung/booking-clone-app"
-          githubUrl="https://github.com/AloyBranCheung/booking-clone-app"
-          deployUrl="https://github.com/AloyBranCheung/booking-clone-app"
         />
 
         <div className={styles.otherProjectsContainer}>

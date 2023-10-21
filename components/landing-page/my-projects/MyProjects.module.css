@@ -1,8 +1,9 @@
 .projectsSection {
   background-color: var(--second-bg-color);
-  border-top: var(--main-border);
+  /* border-top: var(--main-border); */
   border-bottom: var(--main-border);
   padding: 5%;
+  padding-top: 0;
 }
 
 .listOfProjectsContainer {

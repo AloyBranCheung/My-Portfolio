@@ -14,14 +14,13 @@ type Props = {
   techStack: string[];
   githubUrl: string;
   deployUrl: string;
-  redirectUrl: string;
 };
 
 export default function AltFeaturedProject(props: Props) {
   return (
     <li className={`${styles.gridContainer} ${props.className}`}>
       <div className={styles.container}>
-        <Link href={props.redirectUrl}>
+        <Link href={props.deployUrl}>
           <a target="_blank">
             <div className={styles.imageWrapper}>
               <Image
