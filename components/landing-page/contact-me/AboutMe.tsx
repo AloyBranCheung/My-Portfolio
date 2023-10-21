@@ -12,6 +12,12 @@ export default function AboutMe() {
         game.
       </p>
       <p>
+        I have experience in React/Next.js, Strapi, MUI Components, Auth0, as
+        well as some experience in the backend with Python/FastAPI,
+        Postgres/SQL, AWS/Terraform. You can find my professional experience if
+        you click my resume below :).
+      </p>
+      <p>
         A fun fact about me is that in 2018 I paddled in the Club Crews World
         Championship for my Dragonboat team (not to be confused with
         DragonballZ) in Hungary and our team received eight gold medals.
