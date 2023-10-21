@@ -17,7 +17,7 @@ export default function HomePage() {
         <title>Brandon Cheung</title>
       </Head>
       <section className={styles.section}>
-        <Masthead />
+        {/* <Masthead /> */}
         <MyProjects id="projects" />
         <ContactMe id="contactMe" />
       </section>
