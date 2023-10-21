@@ -5,6 +5,15 @@ export default function OtherProjects() {
   return (
     <li className={styles.otherProjectsContainer}>
       <OtherProjectCard
+        title="Workout App (WIP)"
+        cardStyle={`${styles.card1}`}
+        description="A web app clone of the Alpha Progression Android app."
+        descriptionStyle={styles.description}
+        githubUrl="https://github.com/AloyBranCheung/workout-app"
+        deployUrl="https://workout-app-iota-nine.vercel.app/"
+        techStack="Techs: Next.js, Postgres/Prisma,Firebase, tRPC, TailwindCSS"
+      ></OtherProjectCard>
+      <OtherProjectCard
         title="Live Text Editor"
         cardStyle={`${styles.card1}`}
         description="A google docs clone. This full-stack web application was built around Quill, which is an API driven rich text editor. The live editing between multiple users was enabled with SocketIO."
@@ -23,15 +32,6 @@ export default function OtherProjects() {
         techStack="Techs: React, MaterialUI, Chart.js"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="GOAT Quotes"
-        cardStyle={`${styles.card1}`}
-        description="A full-stack website that displays quotes generated from APIs like Kanye REST."
-        descriptionStyle={styles.description}
-        githubUrl="https://github.com/AloyBranCheung/QuotesWebsite"
-        deployUrl="https://gentle-brushlands-11763.herokuapp.com/"
-        techStack="Techs: HTML/CSS/JS, jQuery, Bootstrap5, Node/Express.js"
-      ></OtherProjectCard>
-      <OtherProjectCard
         title="Simon Game"
         cardStyle={`${styles.card1}`}
         description="Remember Hasbro's Simon game? Now online."
@@ -41,22 +41,22 @@ export default function OtherProjects() {
         techStack="Techs: HTML, CSS, Javascript"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="Typescript To-do List"
+        title="GOAT Quotes"
         cardStyle={`${styles.card1}`}
-        description="A to-do list made with typescript react."
+        description="A full-stack website that displays quotes generated from APIs like Kanye REST."
         descriptionStyle={styles.description}
-        githubUrl="https://github.com/AloyBranCheung/TypescriptTodoList"
-        deployUrl="https://merry-torte-9f438a.netlify.app/"
-        techStack="Techs: React.js, Typescript"
+        githubUrl="https://github.com/AloyBranCheung/QuotesWebsite"
+        deployUrl="https://gentle-brushlands-11763.herokuapp.com/"
+        techStack="Techs: HTML/CSS/JS, jQuery, Bootstrap5, Node/Express.js"
       ></OtherProjectCard>
       <OtherProjectCard
-        title="ReactMeals"
+        title="More to come..."
         cardStyle={`${styles.card1}`}
-        description="ReactMeals is a food ordering web app"
+        description="Check my Github for updates :)"
         descriptionStyle={styles.description}
-        githubUrl="https://github.com/AloyBranCheung/ReactMeals"
-        deployUrl="https://aquamarine-capybara-5f358f.netlify.app/"
-        techStack="Techs: React.js, Styled-components, Firebase"
+        githubUrl="https://github.com/AloyBranCheung/"
+        deployUrl="https://github.com/AloyBranCheung/"
+        techStack=""
       ></OtherProjectCard>
     </li>
   );
