@@ -17,7 +17,9 @@ export default function NavbarMenu({ menuState, onMenuClick }: Props) {
         </li>
         <li className={styles.bounceEffect1}>
           <Link href="https://1drv.ms/b/s!Al5ugnacF4jkqp4lJpo0FVhoCq4AtA?e=3ucwlu">
-            <a onClick={onMenuClick}>Resume</a>
+            <a target="_blank" onClick={onMenuClick}>
+              Resume
+            </a>
           </Link>
         </li>
         <li className={styles.bounceEffect2}>
