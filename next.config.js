@@ -7,6 +7,7 @@ const nextConfig = {
       "i.picsum.photos",
       "localhost",
       "127.0.0.1",
+      "tst-portfolio-cms.onrender.com",
     ],
   },
   reactStrictMode: true,
