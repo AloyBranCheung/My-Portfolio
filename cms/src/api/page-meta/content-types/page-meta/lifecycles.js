@@ -1,22 +1,22 @@
 const revalidateNextjs = require("../../../../util/revalidateNext");
 
 module.exports = {
-  afterCreate() {
-    revalidateNextjs();
+  async afterCreate() {
+    await revalidateNextjs();
   },
-  afterCreateMany() {
-    revalidateNextjs();
+  async afterCreateMany() {
+    await revalidateNextjs();
   },
-  afterUpdate() {
-    revalidateNextjs();
+  async afterUpdate() {
+    await revalidateNextjs();
   },
-  afterUpdateMany() {
-    revalidateNextjs();
+  async afterUpdateMany() {
+    await revalidateNextjs();
   },
-  afterDelete() {
-    revalidateNextjs();
+  async afterDelete() {
+    await revalidateNextjs();
   },
-  afterDeleteMany() {
-    revalidateNextjs();
+  async afterDeleteMany() {
+    await revalidateNextjs();
   },
 };
