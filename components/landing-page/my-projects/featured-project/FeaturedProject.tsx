@@ -8,7 +8,6 @@ import LaunchIcon from "@mui/icons-material/Launch";
 type Props = {
   className: string;
   imgSrc: any;
-  heading: string;
   titleProject: string;
   description: string;
   techStack: string[];
@@ -36,7 +35,7 @@ export default function FeaturedProject(props: Props) {
 
       <div className={styles.projectContent}>
         <div className={styles.title}>
-          <h2>{props.heading}</h2>
+          <h2>Featured Project</h2>
           <h1>{props.titleProject}</h1>
         </div>
 

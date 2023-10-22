@@ -30,7 +30,6 @@ export default function MyProjects(props: Props) {
         <AltFeaturedProject
           className={styles.project}
           imgSrc={simplyBudgets}
-          heading="Featured Project"
           titleProject="SimplyBudgets"
           description="A simple budgeting app based on the 50/30/20 rule. You can add/remove and debit/credit expenses. In addition, a history of expenses is kept for future development purposes (e.g. graphing with Highcharts). Please note first load may take a wild as I am hosting on a free service."
           techStack={simplyBudgetsTech}
@@ -40,7 +39,6 @@ export default function MyProjects(props: Props) {
         <FeaturedProject
           className={styles.project}
           imgSrc={boardgameStatsGif}
-          heading="Featured Project"
           titleProject="Boardgame Dashboard"
           description="I like to play board games with my partner and we're competitive. So we created a stack tracker that also includes an app for a board game we love to play that uses Socket.io so we can chat with each other and track each other's score live. Please note first load may take a wild as I am hosting on a free service."
           techStack={boardgameStats}
@@ -50,7 +48,6 @@ export default function MyProjects(props: Props) {
         <AltFeaturedProject
           className={styles.project}
           imgSrc={chatDemo}
-          heading="Featured Project"
           titleProject="Neobrutalistic Chat App"
           description="To learn more about neobrutalism web design, I made a fullstack chat app based around neobrutalistic design. Through SocketIO, users can join a room and live chat with other users. I loved using Tailwind CSS here."
           techStack={chatdemo}
