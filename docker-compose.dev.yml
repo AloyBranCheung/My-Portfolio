@@ -1,0 +1,13 @@
+services:
+  cms:
+    container_name: cms
+    build:
+      context: ./cms/
+      dockerfile: Dockerfile.dev
+    ports:
+      - "1337:1337"
+    env_file:
+      - ./.env
+    volumes:
+      - ./cms:/app
+      - /app/node_modules

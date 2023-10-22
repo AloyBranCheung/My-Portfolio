@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_metas",
+  "info": {
+    "singularName": "page-meta",
+    "pluralName": "page-metas",
+    "displayName": "Page Meta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageMeta": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

@@ -12,7 +12,6 @@ import MyProjects from "../components/landing-page/my-projects/MyProjects";
 import Gutter from "../components/UI/Gutter";
 // types
 import { OtherProjects } from "../types/project-types";
-import { useEffect } from "react";
 
 interface HomePageProps {
   otherProjects: OtherProjects[];

@@ -761,6 +761,37 @@ export interface ApiOtherProjectOtherProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiPageMetaPageMeta extends Schema.CollectionType {
+  collectionName: 'page_metas';
+  info: {
+    singularName: 'page-meta';
+    pluralName: 'page-metas';
+    displayName: 'Page Meta';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageMeta: Attribute.RichText & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::page-meta.page-meta',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::page-meta.page-meta',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -779,6 +810,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::featured-project.featured-project': ApiFeaturedProjectFeaturedProject;
       'api::other-project.other-project': ApiOtherProjectOtherProject;
+      'api::page-meta.page-meta': ApiPageMetaPageMeta;
     }
   }
 }
