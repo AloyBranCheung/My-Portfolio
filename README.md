@@ -2,8 +2,18 @@
 
 ## To run dev:
 
-1. `npm install`
-2. `npm run dev`
+1. `npm install` both `cms` and `root`
+2. `npm run dev` at root
+3. `npm run dev` at `cms`
+
+## PRD:
+
+1. Run `./prd.sh` then
+2. Run `./restart_service.sh client`
+
+## CMS:
+
+1. This Next.js project uses ISR (on-demand) so to trigger regeneration will need a revalidate token whenever the cms makes a change.
 
 ## Made with
 
