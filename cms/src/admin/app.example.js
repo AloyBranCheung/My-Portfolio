@@ -33,7 +33,6 @@ const bootstrap = (app) => {
   console.log(app);
 };
 
-export default {
-  config,
-  bootstrap,
-};
+const appExample = { config, bootstrap };
+
+export default appExample;
