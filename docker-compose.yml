@@ -1,0 +1,19 @@
+# PRD
+services:
+  cms:
+    container_name: prd-cms
+    build:
+      context: ./cms/
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+    env_file:
+      - ./cms/.env
+  client:
+    container_name: prd-client
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env

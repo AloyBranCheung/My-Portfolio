@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "other_projects",
+  "info": {
+    "singularName": "other-project",
+    "pluralName": "other-projects",
+    "displayName": "Other Projects",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectTitle": {
+      "type": "string",
+      "required": true
+    },
+    "projectDescription": {
+      "type": "text",
+      "required": true,
+      "maxLength": 185
+    },
+    "githubUrl": {
+      "type": "string",
+      "required": true
+    },
+    "deployUrl": {
+      "type": "string",
+      "required": true
+    },
+    "techStack": {
+      "type": "string",
+      "default": "Techs:",
+      "required": true
+    },
+    "order": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
