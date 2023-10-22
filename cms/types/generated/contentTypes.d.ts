@@ -677,6 +677,90 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiFeaturedProjectFeaturedProject
+  extends Schema.CollectionType {
+  collectionName: 'featured_projects';
+  info: {
+    singularName: 'featured-project';
+    pluralName: 'featured-projects';
+    displayName: 'Featured Projects';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    projectTitle: Attribute.String & Attribute.Required;
+    projectDescription: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 315;
+      }>;
+    techStack: Attribute.String & Attribute.Required;
+    githubUrl: Attribute.String & Attribute.Required;
+    deployUrl: Attribute.String & Attribute.Required;
+    imgSrc: Attribute.Media & Attribute.Required;
+    order: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::featured-project.featured-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::featured-project.featured-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiOtherProjectOtherProject extends Schema.CollectionType {
+  collectionName: 'other_projects';
+  info: {
+    singularName: 'other-project';
+    pluralName: 'other-projects';
+    displayName: 'Other Projects';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    projectTitle: Attribute.String & Attribute.Required;
+    projectDescription: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 185;
+      }>;
+    githubUrl: Attribute.String & Attribute.Required;
+    deployUrl: Attribute.String & Attribute.Required;
+    techStack: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Techs:'>;
+    order: Attribute.String & Attribute.Required & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::other-project.other-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::other-project.other-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -693,6 +777,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::featured-project.featured-project': ApiFeaturedProjectFeaturedProject;
+      'api::other-project.other-project': ApiOtherProjectOtherProject;
     }
   }
 }
