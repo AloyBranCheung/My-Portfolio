@@ -12,10 +12,10 @@ export default function AboutMe() {
         game.
       </p>
       <p>
-        I have experience in React/Next.js, Strapi, MUI Components, Auth0, as
+        I have professional experience in React/Next.js, Strapi, MUI Components, Auth0, as
         well as some experience in the backend with Python/FastAPI,
         Postgres/SQL, AWS/Terraform. You can find my professional experience if
-        you click my resume below :).
+        you click my resume below :&#41;.
       </p>
       <p>
         A fun fact about me is that in 2018 I paddled in the Club Crews World
