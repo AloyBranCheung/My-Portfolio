@@ -112,5 +112,6 @@ export async function getStaticProps() {
       featuredProjects,
       pageMeta,
     },
+    revalidate: 10,
   };
 }
