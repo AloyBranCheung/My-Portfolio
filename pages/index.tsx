@@ -28,9 +28,6 @@ export default function HomePage({
   featuredProjects,
   pageMeta,
 }: HomePageProps) {
-  console.log({
-    otherProjects,
-  });
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -44,7 +41,11 @@ export default function HomePage({
         </Head>
         <section className={styles.section}>
           {/* <Masthead /> */}
-          <MyProjects id="projects" featuredProjects={featuredProjects} />
+          <MyProjects
+            id="projects"
+            featuredProjects={featuredProjects}
+            otherProjects={otherProjects}
+          />
           <ContactMe id="contactMe" pageMeta={pageMeta} />
         </section>
       </Gutter>
