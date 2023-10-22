@@ -34,14 +34,14 @@ export default function MyProjects({
 }: MyProjectsProps) {
   const myProjects = featuredProjects.map((projectObj) => {
     const isEven = (order: number) => order % 2 === 0; // isEven then AltFeaturedProject
-    const imgUrl = projectObj.imgSrc.data.attributes.url;
+    const imgSrc = projectObj.imgSrc.data.attributes.url;
 
     if (isEven(Number(projectObj.order))) {
       return (
         <AltFeaturedProject
           key={`${projectObj.order}-${projectObj.projectTitle}`}
           className={styles.project}
-          imgSrc={`${process.env.NEXT_PUBLIC_CMS_BASE_URL}${imgUrl}`}
+          imgSrc={imgSrc}
           titleProject={projectObj.projectTitle}
           description={projectObj.projectDescription}
           techStack={projectObj.techStack.split(",")}
@@ -54,7 +54,7 @@ export default function MyProjects({
         <FeaturedProject
           key={`${projectObj.order}-${projectObj.projectTitle}`}
           className={styles.project}
-          imgSrc={`${process.env.NEXT_PUBLIC_CMS_BASE_URL}${imgUrl}`}
+          imgSrc={imgSrc}
           titleProject={projectObj.projectTitle}
           description={projectObj.projectDescription}
           techStack={projectObj.techStack.split(",")}

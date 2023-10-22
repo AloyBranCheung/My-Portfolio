@@ -9,6 +9,7 @@ const nextConfig = {
       "127.0.0.1",
       "tst-portfolio-cms.onrender.com",
       "prd-portfolio-cms.onrender.com",
+      "res.cloudinary.com",
     ],
   },
   reactStrictMode: true,
