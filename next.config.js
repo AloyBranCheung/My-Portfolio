@@ -8,6 +8,7 @@ const nextConfig = {
       "localhost",
       "127.0.0.1",
       "tst-portfolio-cms.onrender.com",
+      "prd-portfolio-cms.onrender.com",
     ],
   },
   reactStrictMode: true,
