@@ -5,13 +5,14 @@ import { Parallax } from "react-scroll-parallax";
 
 type Props = {
   id: string;
+  pageMeta: string;
 };
 
-export default function ContactMe(props: Props) {
+export default function ContactMe({ id, pageMeta }: Props) {
   return (
-    <section id={props.id} className={styles.contactSection}>
+    <section id={id} className={styles.contactSection}>
       <div className={styles.contactFormContainer}>
-        <AboutMe />
+        <AboutMe pageMeta={pageMeta} />
         <ContactForm />
       </div>
     </section>

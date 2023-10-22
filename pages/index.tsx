@@ -30,8 +30,6 @@ export default function HomePage({
 }: HomePageProps) {
   console.log({
     otherProjects,
-    featuredProjects,
-    pageMeta,
   });
   return (
     <motion.section
@@ -46,8 +44,8 @@ export default function HomePage({
         </Head>
         <section className={styles.section}>
           {/* <Masthead /> */}
-          <MyProjects id="projects" />
-          <ContactMe id="contactMe" />
+          <MyProjects id="projects" featuredProjects={featuredProjects} />
+          <ContactMe id="contactMe" pageMeta={pageMeta} />
         </section>
       </Gutter>
     </motion.section>
@@ -78,7 +76,13 @@ export async function getStaticProps() {
 
   // featured projects
   try {
-    const featuredProjectsRes = await cms.get("featured-projects");
+    const featuredProjectsRes = await cms.get("featured-projects", {
+      params: {
+        populate: {
+          imgSrc: true,
+        },
+      },
+    });
     featuredProjects =
       featuredProjectsRes?.data?.data
         .map((cmsObj: CmsResponse<FeaturedProjects>) => {

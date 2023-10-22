@@ -27,6 +27,8 @@ export default function FeaturedProject(props: Props) {
                 src={props.imgSrc}
                 alt="alt-picture"
                 priority={true}
+                width={420}
+                height={215}
               />
             </div>
           </a>

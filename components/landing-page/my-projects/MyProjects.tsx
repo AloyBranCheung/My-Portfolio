@@ -7,27 +7,63 @@ import AltFeaturedProject from "./featured-project/AltFeaturedProject";
 import chatDemo from "../../../public/assets/images/chat demo.gif";
 import simplyBudgets from "../../../public/assets/images/simply-budgets.gif";
 import boardgameStatsGif from "../../../public/assets/images/boardgame-stats.gif";
+import { FeaturedProjects } from "../../../types/project-types";
 
-type Props = {
+type MyProjectsProps = {
   id: string;
+  featuredProjects: FeaturedProjects[];
 };
 
-export default function MyProjects(props: Props) {
-  const chatdemo = ["React.js", "MongoDB", "SocketIO", "Node/Express.js"];
-  const simplyBudgetsTech = [
-    "React/Typescript",
-    "Material UI",
-    "MongoDB/Mongoose",
-    "Node/Express",
-  ];
-  const boardgameStats = ["Next.js", "SocketIO", "Firebase", "TailwindCSS/MUI"];
+export default function MyProjects({ id, featuredProjects }: MyProjectsProps) {
+  // const chatdemo = ["React.js", "MongoDB", "SocketIO", "Node/Express.js"];
+  // const simplyBudgetsTech = [
+  //   "React/Typescript",
+  //   "Material UI",
+  //   "MongoDB/Mongoose",
+  //   "Node/Express",
+  // ];
+  // const boardgameStats = ["Next.js", "SocketIO", "Firebase", "TailwindCSS/MUI"];
+
+  const myProjects = featuredProjects.map((projectObj) => {
+    const isEven = (order: number) => order % 2 === 0; // isEven then AltFeaturedProject
+    const imgUrl = projectObj.imgSrc.data.attributes.url;
+
+    if (isEven(Number(projectObj.order))) {
+      return (
+        <AltFeaturedProject
+          key={`${projectObj.order}-${projectObj.projectTitle}`}
+          className={styles.project}
+          imgSrc={`${process.env.NEXT_PUBLIC_CMS_BASE_URL}${imgUrl}`}
+          titleProject={projectObj.projectTitle}
+          description={projectObj.projectDescription}
+          techStack={projectObj.techStack.split(",")}
+          githubUrl={projectObj.githubUrl}
+          deployUrl={projectObj.deployUrl}
+        />
+      );
+    } else {
+      return (
+        <FeaturedProject
+          key={`${projectObj.order}-${projectObj.projectTitle}`}
+          className={styles.project}
+          imgSrc={`${process.env.NEXT_PUBLIC_CMS_BASE_URL}${imgUrl}`}
+          titleProject={projectObj.projectTitle}
+          description={projectObj.projectDescription}
+          techStack={projectObj.techStack.split(",")}
+          githubUrl={projectObj.githubUrl}
+          deployUrl={projectObj.deployUrl}
+        />
+      );
+    }
+  });
 
   return (
-    <section id={props.id} className={styles.projectsSection}>
+    <section id={id} className={styles.projectsSection}>
       <h1 className={styles.header}>Some things I&apos;ve built. . .</h1>
 
       <ul className={styles.listOfProjectsContainer}>
-        <AltFeaturedProject
+        {myProjects}
+        {/* <AltFeaturedProject
           className={styles.project}
           imgSrc={simplyBudgets}
           titleProject="SimplyBudgets"
@@ -53,7 +89,7 @@ export default function MyProjects(props: Props) {
           techStack={chatdemo}
           githubUrl="https://github.com/AloyBranCheung/neobrutalistic-chat-app"
           deployUrl="https://silly-narwhal-3281d0.netlify.app/"
-        />
+        /> */}
 
         <div className={styles.otherProjectsContainer}>
           <OtherProjects />
