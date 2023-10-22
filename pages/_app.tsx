@@ -5,21 +5,36 @@ import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
 import AuthContextProvider from "../context/AuthContext";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <AuthContextProvider>
-        <AnimatePresence initial={false}>
-          <ParallaxProvider>
-            <Component {...pageProps} />
-          </ParallaxProvider>
-        </AnimatePresence>
-      </AuthContextProvider>
-    </Layout>
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-6H5GXV3KTJ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-6H5GXV3KTJ');
+        `}
+      </Script>
+      <Layout>
+        <Head>
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Head>
+        <AuthContextProvider>
+          <AnimatePresence initial={false}>
+            <ParallaxProvider>
+              <Component {...pageProps} />
+            </ParallaxProvider>
+          </AnimatePresence>
+        </AuthContextProvider>
+      </Layout>
+    </>
   );
 }
 
