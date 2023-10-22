@@ -6,6 +6,7 @@ const nextConfig = {
       "picsum.photos",
       "i.picsum.photos",
       "localhost",
+      "127.0.0.1",
     ],
   },
   reactStrictMode: true,
