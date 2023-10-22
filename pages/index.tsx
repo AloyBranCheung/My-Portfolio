@@ -11,14 +11,28 @@ import ContactMe from "../components/landing-page/contact-me/ContactMe";
 import MyProjects from "../components/landing-page/my-projects/MyProjects";
 import Gutter from "../components/UI/Gutter";
 // types
-import { OtherProjects } from "../types/project-types";
+import {
+  CmsResponse,
+  FeaturedProjects,
+  OtherProjects,
+} from "../types/project-types";
 
 interface HomePageProps {
   otherProjects: OtherProjects[];
+  featuredProjects: FeaturedProjects[];
+  pageMeta: string;
 }
 
-export default function HomePage({ otherProjects }: HomePageProps) {
-  console.log({ otherProjects });
+export default function HomePage({
+  otherProjects,
+  featuredProjects,
+  pageMeta,
+}: HomePageProps) {
+  console.log({
+    otherProjects,
+    featuredProjects,
+    pageMeta,
+  });
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -41,11 +55,48 @@ export default function HomePage({ otherProjects }: HomePageProps) {
 }
 
 export async function getStaticProps() {
-  let otherProjects = [];
+  let featuredProjects: FeaturedProjects[] = [];
+  let otherProjects: OtherProjects[] = [];
+  let pageMeta: string = "";
 
+  // other projects
   try {
     const otherProjectsRes = await cms.get("other-projects");
-    otherProjects = otherProjectsRes?.data?.data || [];
+    otherProjects =
+      otherProjectsRes?.data?.data
+        .map((cmsObj: { id: number; attributes: OtherProjects }) => {
+          const { attributes } = cmsObj;
+          return { ...attributes };
+        })
+        .sort(
+          (a: OtherProjects, b: OtherProjects) =>
+            Number(a.order) - Number(b.order)
+        ) || [];
+  } catch (error) {
+    console.error(error);
+  }
+
+  // featured projects
+  try {
+    const featuredProjectsRes = await cms.get("featured-projects");
+    featuredProjects =
+      featuredProjectsRes?.data?.data
+        .map((cmsObj: CmsResponse<FeaturedProjects>) => {
+          const { attributes } = cmsObj;
+          return { ...attributes };
+        })
+        .sort(
+          (a: OtherProjects, b: OtherProjects) =>
+            Number(a.order) - Number(b.order)
+        ) || [];
+  } catch (error) {
+    console.error(error);
+  }
+
+  // pageMeta
+  try {
+    const pageMetaRes = await cms.get("page-metas");
+    pageMeta = pageMetaRes?.data?.data[0].attributes.pageMeta || "";
   } catch (error) {
     console.error(error);
   }
@@ -53,6 +104,8 @@ export async function getStaticProps() {
   return {
     props: {
       otherProjects,
+      featuredProjects,
+      pageMeta,
     },
   };
 }
