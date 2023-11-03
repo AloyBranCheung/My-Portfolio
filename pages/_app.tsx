@@ -7,6 +7,17 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import AuthContextProvider from "../context/AuthContext";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import LogRocket from "logrocket";
+
+if (
+  process.env.NEXT_PUBLIC_LOG_ROCKET_PROJECT &&
+  process.env.NEXT_PUBLIC_LOG_ROCKET_PROJECT.length > 0
+) {
+  LogRocket.init(process.env.NEXT_PUBLIC_LOG_ROCKET_PROJECT);
+  console.log("Initialized Log Rocket.");
+} else {
+  console.log("Failed to initialize Log Rocket.");
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
