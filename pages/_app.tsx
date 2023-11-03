@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
 import AuthContextProvider from "../context/AuthContext";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <AnimatePresence initial={false}>
             <ParallaxProvider>
               <Component {...pageProps} />
+              <Analytics />
             </ParallaxProvider>
           </AnimatePresence>
         </AuthContextProvider>
